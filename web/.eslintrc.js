@@ -1,13 +1,20 @@
 module.exports = {
-  extends: ['standard', 'standard-react', 'plugin:import/errors', 'plugin:import/warnings'],
+  extends: [
+    'standard',
+    'standard-react',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:prettier/recommended',
+  ],
+  plugins: ['prettier'],
   rules: {
     'react/prop-types': 0,
-    'object-curly-spacing': ['error', 'never']
+    'object-curly-spacing': ['error', 'never'],
   },
   settings: {
     react: {
       pragma: 'React',
-      version: '16.8.4'
-    }
-  }
-}
+      version: '16.8.4',
+    },
+  },
+};
