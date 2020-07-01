@@ -1,0 +1,23 @@
+
+.navbar {
+	background-color: $dark-grey;
+
+	.navbar-toggler-icon {
+		filter: invert(100%);
+	}
+	
+
+	a {
+		color: $font-light-color !important;
+	}
+
+	.nav-link {
+		margin-right: 2rem;
+	}
+
+	.bp3-heading {
+		font-family: Courgette;
+		font-size: $landing-banner-heading-size;
+	}
+
+}

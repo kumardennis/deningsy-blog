@@ -1,0 +1,22 @@
+
+.category-cover {
+	margin-top: 2rem;
+	color: $font-light-color;
+	border-radius: 0 !important;
+
+	.cover-title {
+		font-size: $topic-font-size;
+
+		@media (max-width: $smallScreen) {
+			font-size: $mobile-topic-font-size;
+		  }
+	}
+
+	h2 {
+		font-size: $content-font-size;
+		margin-top: 1rem;
+		@media (max-width: $smallScreen) {
+			font-size: $mobile-content-font-size;
+		  }
+	}
+}

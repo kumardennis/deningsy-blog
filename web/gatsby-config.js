@@ -24,6 +24,7 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         includePaths: ['./src'],
+        data: `@import "variables.scss";@import "main.scss";`,
       },
     },
     `gatsby-plugin-resolve-src`,

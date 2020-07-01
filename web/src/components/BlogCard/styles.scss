@@ -1,0 +1,11 @@
+.blog-card {
+	transition-duration: 0.2s;
+
+	.card-body {
+		background-color: $light-grey;
+	}
+}
+
+.blog-card:hover {
+	transform: scale(1.02);
+}

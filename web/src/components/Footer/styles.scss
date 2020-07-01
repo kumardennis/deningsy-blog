@@ -1,0 +1,19 @@
+
+.navbar {
+	background-color: $dark-grey;
+	
+
+	a {
+		color: $font-light-color !important;
+	}
+
+	.nav-link {
+		margin-right: 2rem;
+	}
+
+	.bp3-heading {
+		font-family: Courgette;
+		font-size: $landing-banner-heading-size;
+	}
+
+}
