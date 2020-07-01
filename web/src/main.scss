@@ -1,0 +1,55 @@
+@import "~bootstrap/scss/bootstrap";
+html, body {
+	font-family : Manjari;
+	margin:0;
+	padding:0;
+	width: 100%;
+	background-color: $daisy;
+
+	.jumbotron {
+		box-shadow: 0 5px 10px $dark-grey;
+	}
+
+	section{
+		margin-bottom: 5rem;
+	}
+
+	.topic{
+		font-size: $topic-font-size;
+		color: $dark-grey;
+		margin-bottom: 1rem;
+		font-weight: 700;
+
+		@media (max-width: $smallScreen){
+			font-size: $mobile-topic-font-size;
+		}
+	}
+
+	.card-title, .title{
+		font-size: $title-font-size;
+		font-weight: 700;
+
+		@media (max-width: $smallScreen) {
+			font-size: $mobile-title-font-size;
+		}
+	}
+
+	.card-text, .content{
+		font-size: $content-font-size;
+
+		@media (max-width: $smallScreen) {
+			font-size: $mobile-content-font-size;
+			max-height: 10rem;
+			overflow: scroll;
+		}
+	}
+
+	.custom-btn {
+		background-color: $dark-grey;
+		color: $font-light-color;	
+		border: none !important;
+	}
+	.custom-btn:hover {
+		background-color: darken($dark-grey, 5%);
+	}
+}

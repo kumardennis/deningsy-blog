@@ -1,0 +1,36 @@
+.cateogry-card {
+	color: $font-light-color;
+	width: 30rem;
+	height: 15rem;
+	-webkit-background-size: cover;
+	-moz-background-size:  cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: 5rem;
+	cursor: pointer;
+	transition-duration: 0.5s;
+	border-radius: $border-radius;
+
+	@media (max-width: $smallScreen){
+		width: auto;
+	}
+
+	.card-title{
+		font-size: $regular-font-size;
+		@media (max-width: $smallScreen){
+			font-size: $mobile-regular-font-size;
+		}
+	}
+
+
+		.card-text {
+			transform: scaleY(0);
+			transition-duration: 0.2s;
+		}
+
+
+}
+
+.cateogry-card:hover {
+	transform: scale(1.02)
+}

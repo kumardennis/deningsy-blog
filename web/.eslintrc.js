@@ -12,6 +12,11 @@ module.exports = {
     'object-curly-spacing': ['error', 'never'],
   },
   settings: {
+    'import/resolver': {
+      node: {
+        moduleDirectory: ['node_modules', 'src/'],
+      },
+    },
     react: {
       pragma: 'React',
       version: '16.8.4',

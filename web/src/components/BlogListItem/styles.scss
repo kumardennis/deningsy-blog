@@ -1,0 +1,30 @@
+.blog-list-item {
+	background-color: $light-grey;
+	padding: 2rem;
+	border-radius: $border-radius;
+	height: fit-content;
+
+	@media (max-width: $smallScreen) {
+		padding: 0.5rem 0 0 0;
+		margin-bottom: 2rem;
+	}
+
+	.img-thumbnail {
+		border-color: $font-light-color !important;
+		background-color: $dark-grey !important;
+	}
+
+	.blog-list-col {
+		// display: flex !important;
+		.blog-list-btn-container {
+			// align-self: flex-end;
+			display: flex !important;
+			justify-content: flex-end;
+			padding-bottom: 0;
+			min-width: fit-content;
+
+		}
+	}
+
+	
+}

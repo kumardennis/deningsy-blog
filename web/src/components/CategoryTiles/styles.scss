@@ -1,0 +1,12 @@
+
+.row {
+	margin-bottom: 2rem;
+
+	@media (max-width: $smallScreen) {
+		margin-bottom: 0;
+	}
+
+	.col-lg {
+		margin-bottom: 2rem;
+	}
+}

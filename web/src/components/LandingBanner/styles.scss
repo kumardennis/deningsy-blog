@@ -1,0 +1,23 @@
+
+.jumbotron {
+	background-color: $dark-grey !important;
+	color: $font-light-color;
+	border-radius: 0 !important;
+
+	.landing-title {
+		font-family: Courgette;
+		font-size: $landing-banner-heading-size;
+
+		@media (max-width: $smallScreen) {
+			font-size: $mobile-landing-banner-heading-size;
+		  }
+	}
+
+	h2 {
+		font-size: $regular-font-size;
+		margin-top: 1rem;
+		@media (max-width: $smallScreen) {
+			font-size: $mobile-regular-font-size;
+		  }
+	}
+}
