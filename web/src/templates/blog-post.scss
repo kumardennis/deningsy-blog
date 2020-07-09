@@ -8,6 +8,9 @@
 	@media (max-width: $smallScreen) {
 		max-width: 100% !important;
 	}
+	@media (min-width: $smallScreen) and (max-width: $mediumScreen) {
+		max-width: 80% !important;
+	}
 
 	.img-fluid{
 		max-width: 100% !important;
@@ -18,7 +21,7 @@
 
 		
 
-		.author {
+		.blog-details {
 			margin-top: 1rem;		
 			font-size: $smallest-font-size;
 			display: flex;
@@ -33,16 +36,20 @@
 	
 				.author-row {
 					margin-bottom: 0 !important;
-					width: 200px;
+					width: 250px;
 				}
 	
 		}
 
-		.author > .row > .col {
+		.blog-details > .row > .col {
 			padding: 0 !important;
 		}
-		.author > .row > .col-1 {
+		.blog-details > .row > .col-1 {
 			max-width: min-content !important;
+		}
+
+		.blog-details-2 {
+			margin: 1rem 0 0 0;
 		}
 		
 	.title {
@@ -55,14 +62,23 @@
 
 	.social-sharing {
 		display: flex;
-		justify-content: space-between;
-		width: 40%;
+		justify-content: space-around;
+		width: 50%;
 		align-items: center;
 		padding: 2rem 1rem 2rem 0;
 		
 
 		@media (max-width: $smallScreen) {
 			width: 100%;
+		}
+
+		.social-sharing-icons {
+			margin: 1rem;
+			width: 60%;
+
+			@media (max-width: $smallScreen) {
+				width: 40%;
+			}
 		}
 	}
 	}

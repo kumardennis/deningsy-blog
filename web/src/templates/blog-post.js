@@ -50,7 +50,7 @@ const BlogPost = ({data}) => {
         <Image src={base.mainImage.asset.fluid.src} fluid />
         <Container className='content-container'>
           <h2 className='title'>{base.title}</h2>
-          <div className='author'>
+          <div className='blog-details'>
             <Row>
               <Col xs={1}>
                 <Image
@@ -86,11 +86,18 @@ const BlogPost = ({data}) => {
               </Col>
             </Row>
           </div>
+          <div className='blog-details-2'>
+            <Row>
+              <Col>
+                {base.categories[0].title} | {base.readTime}min read
+              </Col>
+            </Row>
+          </div>
           <div className='content'>
             <BlockContent blocks={base._rawBody} />
           </div>
           <div className='social-sharing'>
-            <span>Want to share it ?</span>
+            <span>Want to share it?</span>
             <div className='social-sharing-icons'>
               <TwitterShareButton url={currentUrl}>
                 <TwitterIcon size={30} round />
@@ -127,6 +134,10 @@ export const query = graphql`
         node {
           title
           publishedAt(formatString: "MMMM D, YYYY")
+          categories {
+            title
+          }
+          readTime
           authors {
             author {
               name
