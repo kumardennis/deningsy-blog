@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import './styles.scss';
 
 const Header = () => {
@@ -16,9 +17,21 @@ const Header = () => {
       <Navbar.Toggle aria-controls='basic-navbar-nav' />
       <Navbar.Collapse id='basic-navbar-nav'>
         <Nav className='mr-auto ml-auto'>
-          <Nav.Link href='/'>Home</Nav.Link>
-          <Nav.Link href='/interiors/'>Interior decorations and smart planning</Nav.Link>
-          <Nav.Link href='#link'>Travel</Nav.Link>
+          <Nav.Link>
+            <AniLink hex='#414141' paintDrip direction='right' to='/'>
+              Home
+            </AniLink>
+          </Nav.Link>
+          <Nav.Link>
+            <AniLink bg='#414141' cover direction='right' to='/interiors/'>
+              Interior
+            </AniLink>
+          </Nav.Link>
+          <Nav.Link href='#link'>
+            <AniLink bg='#414141' cover direction='right' to='/travel/'>
+              Travel
+            </AniLink>
+          </Nav.Link>
           <Nav.Link href='#link'>Fitness</Nav.Link>
           <Nav.Link href='#link'>Preganancy and Children</Nav.Link>
         </Nav>

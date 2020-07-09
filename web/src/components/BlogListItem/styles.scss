@@ -3,6 +3,7 @@
 	padding: 2rem;
 	border-radius: $border-radius;
 	height: fit-content;
+	box-shadow: 0 0 10px $dark-grey;
 
 	@media (max-width: $smallScreen) {
 		padding: 0.5rem 0 0 0;

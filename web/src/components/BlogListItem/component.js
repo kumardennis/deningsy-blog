@@ -1,14 +1,12 @@
 import React from 'react';
-
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
-
 import './styles.scss';
 
-const BlogListItem = ({imgSrc, title, children, author}) => {
+const BlogListItem = ({imgSrc, title, children, author, slug}) => {
   return (
     <div>
       <Row className='blog-list-item'>
@@ -22,7 +20,9 @@ const BlogListItem = ({imgSrc, title, children, author}) => {
             <Card.Text>-By {author}</Card.Text>
           </Card.Body>
           <div className='blog-list-btn-container'>
-            <Button className='custom-btn '>Read the blog</Button>
+            <AniLink className='custom-btn ' bg='#414141' cover direction='right' to={slug}>
+              Read the blog
+            </AniLink>
           </div>
         </Col>
       </Row>
