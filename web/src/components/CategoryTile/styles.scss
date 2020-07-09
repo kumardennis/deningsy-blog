@@ -10,6 +10,7 @@
 	cursor: pointer;
 	transition-duration: 0.5s;
 	border-radius: $border-radius;
+	box-shadow: 0 0 10px $dark-grey;
 
 	@media (max-width: $smallScreen){
 		width: auto;
