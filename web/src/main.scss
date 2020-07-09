@@ -6,12 +6,9 @@ html, body {
 	width: 100%;
 	background-color: $daisy;
 
+
 	.jumbotron {
 		box-shadow: 0 5px 10px $dark-grey;
-	}
-
-	section{
-		margin-bottom: 5rem;
 	}
 
 	.topic{
@@ -23,6 +20,11 @@ html, body {
 		@media (max-width: $smallScreen){
 			font-size: $mobile-topic-font-size;
 		}
+	}
+
+	.container {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
 	}
 
 	.card-title, .title{
@@ -39,15 +41,16 @@ html, body {
 
 		@media (max-width: $smallScreen) {
 			font-size: $mobile-content-font-size;
-			max-height: 10rem;
-			overflow: scroll;
 		}
 	}
 
-	.custom-btn {
+	.custom-btn, .custom-btn>a {
 		background-color: $dark-grey;
 		color: $font-light-color;	
 		border: none !important;
+		margin: 1rem;
+		padding: 0.75rem 1rem;
+		border-radius: $border-radius;
 	}
 	.custom-btn:hover {
 		background-color: darken($dark-grey, 5%);

@@ -36,7 +36,7 @@ const CategoryTiles = () => {
         </Col>
         <Col lg>
           <CategoryTile
-            title='Pregnancy and Children'
+            title='Maternity'
             description='Here you can find posts about how we advice to deal efficiently while having a child or during preganancy'
             imgSrc={'../../images/interior-light.jpg'}
           />

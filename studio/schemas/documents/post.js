@@ -66,6 +66,11 @@ export default {
       name: 'body',
       type: 'bodyPortableText',
       title: 'Body'
+    },
+    {
+      name: 'readTime',
+      type: 'number',
+      title: 'Time it takes to read the blogpost in minutes'
     }
   ],
   orderings: [
