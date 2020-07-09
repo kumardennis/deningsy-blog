@@ -6,6 +6,11 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:prettier/recommended',
   ],
+  parser: 'babel-eslint',
+  parserOptions: {
+    sourceType: 'module',
+    allowImportExportEverywhere: true,
+  },
   plugins: ['prettier'],
   rules: {
     'react/prop-types': 0,

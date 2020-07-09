@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Layout from 'components/Layout/component';
 import {graphql} from 'gatsby';
 import Image from 'react-bootstrap/Image';
@@ -6,7 +6,6 @@ import Container from 'react-bootstrap/Container';
 import BlockContent from '@sanity/block-content-to-react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import FollowAt from 'react-social-media-follow';
 import {
   EmailShareButton,
   FacebookShareButton,
@@ -21,10 +20,21 @@ import {
   TwitterIcon,
   WhatsappIcon,
 } from 'react-share';
+import loadable from '@loadable/component';
 
 import './blog-post.scss';
 
 const BlogPost = ({data}) => {
+  let currentUrl = '';
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      currentUrl = window.location.href;
+    }
+  });
+
+  const FollowAt = loadable(() => import('react-social-media-follow'));
+
   const base = data.allSanityPost.edges[0].node;
 
   const links = [
@@ -82,22 +92,22 @@ const BlogPost = ({data}) => {
           <div className='social-sharing'>
             <span>Want to share it ?</span>
             <div className='social-sharing-icons'>
-              <TwitterShareButton url={window.location.href}>
+              <TwitterShareButton url={currentUrl}>
                 <TwitterIcon size={30} round />
               </TwitterShareButton>
-              <InstapaperShareButton url={window.location.href}>
+              <InstapaperShareButton url={currentUrl}>
                 <InstapaperIcon size={30} round />
               </InstapaperShareButton>
-              <FacebookShareButton url={window.location.href}>
+              <FacebookShareButton url={currentUrl}>
                 <FacebookIcon size={30} round />
               </FacebookShareButton>
-              <EmailShareButton url={window.location.href}>
+              <EmailShareButton url={currentUrl}>
                 <EmailIcon size={30} round />
               </EmailShareButton>
-              <WhatsappShareButton url={window.location.href}>
+              <WhatsappShareButton url={currentUrl}>
                 <WhatsappIcon size={30} round />
               </WhatsappShareButton>
-              <LinkedinShareButton url={window.location.href}>
+              <LinkedinShareButton url={currentUrl}>
                 <LinkedinIcon size={30} round />
               </LinkedinShareButton>
             </div>
