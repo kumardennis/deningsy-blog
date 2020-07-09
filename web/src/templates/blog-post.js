@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import Layout from 'components/Layout/component';
 import {graphql} from 'gatsby';
 import Image from 'react-bootstrap/Image';
@@ -27,11 +27,11 @@ import './blog-post.scss';
 const BlogPost = ({data}) => {
   let currentUrl = '';
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      currentUrl = window.location.href;
-    }
-  });
+  if (typeof window !== 'undefined') {
+    currentUrl = window.location.href;
+  }
+
+  console.log(currentUrl);
 
   const FollowAt = loadable(() => import('react-social-media-follow'));
 
