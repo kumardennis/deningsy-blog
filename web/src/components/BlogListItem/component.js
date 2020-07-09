@@ -10,7 +10,7 @@ const BlogListItem = ({imgSrc, title, children, author, slug}) => {
   return (
     <div>
       <Row className='blog-list-item'>
-        <Col sm={5}>
+        <Col>
           <Image src={imgSrc} thumbnail />
         </Col>
         <Col lg className='blog-list-col'>

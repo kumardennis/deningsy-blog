@@ -16,14 +16,11 @@
 	}
 
 	.blog-list-col {
-		// display: flex !important;
 		.blog-list-btn-container {
-			// align-self: flex-end;
 			display: flex !important;
 			justify-content: flex-end;
 			padding-bottom: 0;
 			min-width: fit-content;
-
 		}
 	}
 
