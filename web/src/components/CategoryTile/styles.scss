@@ -16,6 +16,10 @@
 		width: auto;
 	}
 
+	.category-tile-link {
+		color: $font-light-color;
+	}
+
 	.card-title{
 		font-size: $regular-font-size;
 		@media (max-width: $smallScreen){

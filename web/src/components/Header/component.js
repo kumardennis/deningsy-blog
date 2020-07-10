@@ -6,7 +6,7 @@ import './styles.scss';
 
 const Header = () => {
   return (
-    <Navbar collapseOnSelect expand='lg' sticky='top'>
+    <Navbar collapseOnSelect expand='lg' fixed='top'>
       <Navbar.Brand
         className='ml-auto d-none d-lg-block'
         style={{fontFamily: 'Courgette'}}
@@ -24,16 +24,25 @@ const Header = () => {
           </Nav.Link>
           <Nav.Link>
             <AniLink bg='#414141' cover direction='right' to='/interiors/'>
-              Interior
+              Interiors
             </AniLink>
           </Nav.Link>
-          <Nav.Link href='#link'>
+          <Nav.Link>
+            <AniLink bg='#414141' cover direction='right' to='/fitness/'>
+              Fitness
+            </AniLink>
+          </Nav.Link>
+          <Nav.Link>
             <AniLink bg='#414141' cover direction='right' to='/travel/'>
               Travel
             </AniLink>
           </Nav.Link>
-          <Nav.Link href='#link'>Fitness</Nav.Link>
-          <Nav.Link href='#link'>Preganancy and Children</Nav.Link>
+
+          <Nav.Link href='#link'>
+            <AniLink bg='#414141' cover direction='right' to='/maternity/'>
+              Maternity
+            </AniLink>
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

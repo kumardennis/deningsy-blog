@@ -15,7 +15,10 @@ export default function Section2Query(props) {
     <StaticQuery
       query={graphql`
         query {
-          allSanityPost(sort: {fields: publishedAt, order: ASC}) {
+          allSanityPost(
+            sort: {fields: publishedAt, order: ASC}
+            filter: {categories: {elemMatch: {title: {eq: "Interiors"}}}}
+          ) {
             edges {
               node {
                 title
@@ -36,6 +39,9 @@ export default function Section2Query(props) {
                 _rawBody(resolveReferences: {maxDepth: 10})
                 slug {
                   current
+                }
+                categories {
+                  title
                 }
               }
             }

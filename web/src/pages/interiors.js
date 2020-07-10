@@ -1,9 +1,9 @@
 import React from 'react';
 import Layout from 'components/Layout/component';
-import Section1 from 'containers/InteriorPage/Section1';
-import Section2 from 'containers/InteriorPage/Section2';
+import Section1 from 'containers/InteriorsPage/Section1';
+import Section2 from 'containers/InteriorsPage/Section2';
 
-const InteriorPage = () => {
+const InteriorsPage = () => {
   return (
     <Layout>
       <Section1 />
@@ -12,4 +12,4 @@ const InteriorPage = () => {
   );
 };
 
-export default InteriorPage;
+export default InteriorsPage;

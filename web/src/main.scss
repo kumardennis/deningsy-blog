@@ -6,6 +6,10 @@ html, body {
 	width: 100%;
 	background-color: $daisy;
 
+	main {
+		padding-top: 40px;
+	}
+
 
 	.jumbotron {
 		box-shadow: 0 5px 10px $dark-grey;

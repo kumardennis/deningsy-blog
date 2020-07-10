@@ -17,7 +17,9 @@ const BlogList = ({query}) => {
               title={post.node.title}
               imgSrc={post.node.mainImage.asset.fluid.src}
               author={post.node.authors[0].author.name}
-              slug={post.node.slug.current}
+              slug={
+                post.node.categories[0].title.toLowerCase() + '/' + post.node.slug.current + '/'
+              }
             >
               <BlockContent block={post.node._rawBody} />
             </BlogListItem>

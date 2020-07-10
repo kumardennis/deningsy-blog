@@ -1,10 +1,10 @@
 import React, {useEffect, useRef} from 'react';
-
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import Card from 'react-bootstrap/Card';
 
 import './styles.scss';
 
-const CategoryTile = ({title, imgSrc, description}) => {
+const CategoryTile = ({title, imgSrc, description, to}) => {
   const cardRef = useRef(null);
   const mouseEnter = (event) => {
     event.currentTarget.querySelector('p').style.transform = 'scaleY(1)';
@@ -26,7 +26,11 @@ const CategoryTile = ({title, imgSrc, description}) => {
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}
     >
-      <Card.Title>{title}</Card.Title>
+      <Card.Title>
+        <AniLink className='category-tile-link' bg='#414141' cover direction='right' to={to}>
+          {title}
+        </AniLink>
+      </Card.Title>
       <Card.Text>{description}</Card.Text>
     </Card>
   );
