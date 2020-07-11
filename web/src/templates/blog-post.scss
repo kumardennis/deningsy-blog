@@ -62,8 +62,8 @@
 
 	.social-sharing {
 		display: flex;
-		justify-content: space-around;
-		width: 50%;
+		justify-content: flex-start;
+		width: 100%;
 		align-items: center;
 		padding: 2rem 1rem 2rem 0;
 		
@@ -72,12 +72,15 @@
 			width: 100%;
 		}
 
+		.social-sharing-text {
+			width: fit-content;
+		}
+
 		.social-sharing-icons {
 			margin: 1rem;
-			width: 60%;
 
-			@media (max-width: $smallScreen) {
-				width: 40%;
+			.react-share__ShareButton {
+				margin: 0.5rem;
 			}
 		}
 	}

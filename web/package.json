@@ -48,8 +48,11 @@
     "gatsby-plugin-transition-link": "^1.20.2",
     "gatsby-source-filesystem": "^2.3.18",
     "gsap": "^3.3.4",
+    "moment": "^2.27.0",
+    "moment-timezone": "^0.5.31",
     "node-sass": "^4.14.1",
     "react-bootstrap": "^1.0.1",
+    "react-moment": "^0.9.7",
     "react-share": "^4.2.1",
     "react-social-media-follow": "^1.1.1",
     "velocity-react": "^1.4.3"

@@ -21,6 +21,8 @@ import {
   WhatsappIcon,
 } from 'react-share';
 import loadable from '@loadable/component';
+import Moment from 'react-moment';
+import 'moment-timezone';
 
 import './blog-post.scss';
 
@@ -69,7 +71,11 @@ const BlogPost = ({data}) => {
                 </Row>
                 <Row className='author-row'>
                   <Col>
-                    <span>{base.publishedAt}</span>
+                    <span>
+                      <Moment format='llll' local>
+                        {base.publishedAt}
+                      </Moment>
+                    </span>
                   </Col>
                 </Row>
               </Col>
@@ -97,7 +103,7 @@ const BlogPost = ({data}) => {
             <BlockContent blocks={base._rawBody} />
           </div>
           <div className='social-sharing'>
-            <span>Want to share it?</span>
+            <span className='social-sharing-text'>Want to share it?</span>
             <div className='social-sharing-icons'>
               <TwitterShareButton url={currentUrl}>
                 <TwitterIcon size={30} round />
@@ -133,7 +139,7 @@ export const query = graphql`
       edges {
         node {
           title
-          publishedAt(formatString: "MMMM D, YYYY")
+          publishedAt
           categories {
             title
           }
