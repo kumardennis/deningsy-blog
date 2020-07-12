@@ -37,6 +37,13 @@ module.exports = {
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-transition-link`,
     {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint:
+          'https://deningsy.us10.list-manage.com/subscribe/post?u=c0386d5d905bc0f02ecc1adda&amp;id=37289488b4',
+      },
+    },
+    {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
