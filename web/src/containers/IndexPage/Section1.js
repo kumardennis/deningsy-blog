@@ -4,7 +4,7 @@ import LandingBanner from 'components/LandingBanner/component';
 
 const Section1 = (props) => {
   return (
-    <section>
+    <section className='section'>
       <LandingBanner />
     </section>
   );

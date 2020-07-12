@@ -1,44 +1,33 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import BlogCard from 'components/BlogCard/component';
-import CardDeck from 'react-bootstrap/CardColumns';
+import CardColumns from 'react-bootstrap/CardColumns';
+import BlockContent from '@sanity/block-content-to-react';
 
-const BlogCards = ({topic}) => {
+const BlogCards = ({query, topic}) => {
+  const base = query.allSanityPost.edges;
+
   return (
     <Container>
       <h3 className='topic'>{topic}</h3>
-      <CardDeck>
-        <BlogCard
-          imgSrc='../../images/interior2-light.jpg'
-          title='How to fit too much stuff in a single room apartement'
-        >
-          Descrition1
-        </BlogCard>
-        <BlogCard
-          imgSrc='../../images/interior3- dark.jpg'
-          title='How to use single room apartement as personal gym'
-        >
-          Something2
-        </BlogCard>
-        <BlogCard
-          imgSrc='../../images/interior3- dark.jpg'
-          title='How to use single room apartement as personal gym'
-        >
-          Something2
-        </BlogCard>
-        <BlogCard
-          imgSrc='../../images/interior3- dark.jpg'
-          title='How to use single room apartement as personal gym'
-        >
-          Something2
-        </BlogCard>
-        <BlogCard
-          imgSrc='../../images/interior3- dark.jpg'
-          title='How to use single room apartement as personal gym'
-        >
-          Something2
-        </BlogCard>
-      </CardDeck>
+      <CardColumns>
+        {base.map((post, id) => {
+          return (
+            <BlogCard
+              imgSrc={post.node.mainImage.asset.fluid.src}
+              title={post.node.title}
+              slug={
+                post.node.categories[0].title.toLowerCase() + '/' + post.node.slug.current + '/'
+              }
+              category={post.node.categories[0].title}
+              readTime={post.node.readTime}
+              publishedAt={post.node.publishedAt}
+            >
+              <BlockContent blocks={post.node._rawExcerpt} />
+            </BlogCard>
+          );
+        })}
+      </CardColumns>
     </Container>
   );
 };

@@ -16,12 +16,11 @@ const BlogList = ({query}) => {
             <BlogListItem
               title={post.node.title}
               imgSrc={post.node.mainImage.asset.fluid.src}
-              author={post.node.authors[0].author.name}
               slug={
                 post.node.categories[0].title.toLowerCase() + '/' + post.node.slug.current + '/'
               }
             >
-              <BlockContent block={post.node._rawBody} />
+              <BlockContent blocks={post.node._rawExcerpt} />
             </BlogListItem>
           );
         })}

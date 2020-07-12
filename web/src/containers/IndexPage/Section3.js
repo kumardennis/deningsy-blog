@@ -1,11 +1,11 @@
 import React from 'react';
 
-import BlogCards from 'components/BlogCards/component';
+import CategoryTiles from 'components/CategoryTiles/component';
 
 const Section3 = (props) => {
   return (
-    <section>
-      <BlogCards topic='Recent blogs' />
+    <section className='section'>
+      <CategoryTiles />
     </section>
   );
 };
