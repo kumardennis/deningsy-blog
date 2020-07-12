@@ -17,32 +17,32 @@ const Header = () => {
       <Navbar.Toggle aria-controls='basic-navbar-nav' />
       <Navbar.Collapse id='basic-navbar-nav'>
         <Nav className='mr-auto ml-auto'>
-          <Nav.Link>
+          <Nav.Item>
             <AniLink hex='#414141' paintDrip direction='right' to='/'>
               Home
             </AniLink>
-          </Nav.Link>
-          <Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
             <AniLink bg='#414141' cover direction='right' to='/interiors/'>
               Interiors
             </AniLink>
-          </Nav.Link>
-          <Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
             <AniLink bg='#414141' cover direction='right' to='/fitness/'>
               Fitness
             </AniLink>
-          </Nav.Link>
-          <Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
             <AniLink bg='#414141' cover direction='right' to='/travel/'>
               Travel
             </AniLink>
-          </Nav.Link>
+          </Nav.Item>
 
-          <Nav.Link href='#link'>
+          <Nav.Item>
             <AniLink bg='#414141' cover direction='right' to='/maternity/'>
               Maternity
             </AniLink>
-          </Nav.Link>
+          </Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
