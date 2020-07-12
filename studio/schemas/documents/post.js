@@ -28,6 +28,11 @@ export default {
       description: 'This can be used to schedule post for publishing'
     },
     {
+      title: 'Featured Post',
+      name: 'featuredPost',
+      type: 'boolean'
+    },
+    {
       name: 'mainImage',
       type: 'mainImage',
       title: 'Main image'
