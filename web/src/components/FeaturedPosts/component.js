@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Container from 'react-bootstrap/Container';
-
+import BlockContent from '@sanity/block-content-to-react';
 import './styles.scss';
 
 const FeaturedPosts = ({query}) => {
@@ -19,8 +19,8 @@ const FeaturedPosts = ({query}) => {
                 alt='First slide'
               />
               <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <h3>{post.node.title}</h3>
+                <BlockContent blocks={post.node._rawExcerpt} />
               </Carousel.Caption>
             </Carousel.Item>
           );
