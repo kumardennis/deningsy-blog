@@ -6,6 +6,7 @@ import BlockContent from '@sanity/block-content-to-react';
 
 const BlogCards = ({query, topic}) => {
   const base = query.allSanityPost.edges;
+
   return (
     <Container>
       <h3 className='topic'>{topic}</h3>
