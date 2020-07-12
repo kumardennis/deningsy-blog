@@ -4,7 +4,7 @@ import CategoryCover from 'components/CategoryCover/component';
 
 const Section1 = ({data}) => {
   return (
-    <section>
+    <section className='section'>
       <CategoryCover
         title='Interior decorations and smart planning'
         description={data.allSanityCategory.edges[0].node.description}

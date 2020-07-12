@@ -11,6 +11,9 @@ html, body {
 		min-height: 100vh;
 	}
 
+	.section {
+		margin-bottom: 5rem;
+	}
 
 	.jumbotron {
 		box-shadow: 0 5px 10px $dark-grey;
@@ -32,12 +35,21 @@ html, body {
 		margin-bottom: 2rem;
 	}
 
-	.card-title, .title{
+	.title{
 		font-size: $title-font-size;
 		font-weight: 700;
 
 		@media (max-width: $smallScreen) {
 			font-size: $mobile-title-font-size;
+		}
+	}
+
+	.card-title{
+		font-size: $regular-font-size;
+		font-weight: 700;
+
+		@media (max-width: $smallScreen) {
+			font-size: $mobile-regular-font-size;
 		}
 	}
 
@@ -59,5 +71,10 @@ html, body {
 	}
 	.custom-btn:hover {
 		background-color: darken($dark-grey, 5%);
+	}
+
+	.link-to-post {
+		color: $dark-grey;
+		font-weight: 700;
 	}
 }

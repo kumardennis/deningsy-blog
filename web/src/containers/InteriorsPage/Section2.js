@@ -4,7 +4,7 @@ import BlogList from 'components/BlogList/component';
 
 const Section2 = ({data}) => {
   return (
-    <section>
+    <section className='section'>
       <BlogList query={data} />
     </section>
   );
@@ -24,19 +24,14 @@ export default function Section2Query(props) {
                 title
                 mainImage {
                   asset {
-                    fluid(maxWidth: 1600) {
+                    fluid(maxHeight: 130, maxWidth: 230) {
                       src
                     }
                   }
                   caption
                 }
-                authors {
-                  author {
-                    name
-                  }
-                }
+
                 _rawExcerpt(resolveReferences: {maxDepth: 10})
-                _rawBody(resolveReferences: {maxDepth: 10})
                 slug {
                   current
                 }

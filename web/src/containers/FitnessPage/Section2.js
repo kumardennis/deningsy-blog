@@ -4,7 +4,7 @@ import BlogList from 'components/BlogList/component';
 
 const Section2 = ({data}) => {
   return (
-    <section>
+    <section className='section'>
       <BlogList query={data} />
     </section>
   );

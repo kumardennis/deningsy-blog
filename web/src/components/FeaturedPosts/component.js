@@ -8,6 +8,7 @@ const FeaturedPosts = ({query}) => {
   const base = query.allSanityPost.edges;
   return (
     <Container>
+      <h3 className='topic'>Featured posts</h3>
       <Carousel>
         {base.map((post, id) => {
           return (

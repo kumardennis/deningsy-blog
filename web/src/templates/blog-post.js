@@ -33,8 +33,6 @@ const BlogPost = ({data}) => {
     currentUrl = window.location.href;
   }
 
-  console.log(currentUrl);
-
   const FollowAt = loadable(() => import('react-social-media-follow'));
 
   const base = data.allSanityPost.edges[0].node;
@@ -95,7 +93,7 @@ const BlogPost = ({data}) => {
           <div className='blog-details-2'>
             <Row>
               <Col>
-                {base.categories[0].title} | {base.readTime}min read
+                {base.categories[0].title} &#8226; {base.readTime}min read
               </Col>
             </Row>
           </div>

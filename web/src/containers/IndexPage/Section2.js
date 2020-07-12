@@ -4,7 +4,7 @@ import FeaturedPosts from 'components/FeaturedPosts/component';
 
 const Section2 = ({data}) => {
   return (
-    <section>
+    <section className='section'>
       <FeaturedPosts query={data} />
     </section>
   );
