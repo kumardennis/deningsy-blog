@@ -20,7 +20,7 @@ const BlogCard = ({imgSrc, title, children, slug, category, readTime, publishedA
               <Moment format='llll' local>
                 {publishedAt}
               </Moment>{' '}
-              &#8226; {readTime}min read |{' '}
+              &#8226; {readTime}min read
             </Col>
           </Row>
         </div>
