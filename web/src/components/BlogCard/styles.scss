@@ -1,6 +1,8 @@
 .blog-card {
 	transition-duration: 0.2s;
-
+	border: none !important;
+	box-shadow: 0 0 10px $dark-grey;
+	margin: 1rem;
 	.card-body {
 		background-color: $light-grey;
 
