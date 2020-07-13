@@ -84,4 +84,12 @@ html, body {
 	.blog-details-small {
 		font-size: $smallest-font-size;
 	}
+	.Toastify__toast--error {
+		background-color: rgba(145, 13, 13, 0.9);
+		box-shadow: 0 0 15px #961c15;
+	}
+	.Toastify__toast--success {
+		background-color: rgba(37, 145, 13, 0.9);
+		box-shadow: 0 0 15px #2eb310;
+	}
 }

@@ -52,11 +52,13 @@
     "moment": "^2.27.0",
     "moment-timezone": "^0.5.31",
     "node-sass": "^4.14.1",
+    "react-adsense": "^0.1.0",
     "react-animated-slider": "^2.0.0",
     "react-bootstrap": "^1.0.1",
     "react-moment": "^0.9.7",
     "react-share": "^4.2.1",
     "react-social-media-follow": "^1.1.1",
+    "react-toastify": "^6.0.8",
     "velocity-react": "^1.4.3"
   }
 }
