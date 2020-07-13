@@ -1,8 +1,10 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import BlogCard from 'components/BlogCard/component';
-import CardColumns from 'react-bootstrap/CardColumns';
+import CardGroup from 'react-bootstrap/CardGroup';
 import BlockContent from '@sanity/block-content-to-react';
+
+import './styles.scss';
 
 const BlogCards = ({query, topic}) => {
   const base = query.allSanityPost.edges;
@@ -10,7 +12,7 @@ const BlogCards = ({query, topic}) => {
   return (
     <Container>
       <h3 className='topic'>{topic}</h3>
-      <CardColumns>
+      <CardGroup>
         {base.map((post, id) => {
           return (
             <BlogCard
@@ -27,7 +29,7 @@ const BlogCards = ({query, topic}) => {
             </BlogCard>
           );
         })}
-      </CardColumns>
+      </CardGroup>
     </Container>
   );
 };
