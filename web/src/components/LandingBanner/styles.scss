@@ -1,9 +1,10 @@
 
 .jumbotron {
+	margin-top: 2rem;
 	background-color: $dark-grey !important;
+	background-image: url('../../images/dark-pattern.png');
 	color: $font-light-color;
 	border-radius: 0 !important;
-	margin-bottom: 0 !important;
 
 	.landing-title {
 		font-family: Courgette;
