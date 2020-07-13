@@ -24,7 +24,7 @@ export default function Section2Query(props) {
                 title
                 mainImage {
                   asset {
-                    fluid(maxWidth: 1600) {
+                    fluid(maxHeight: 450) {
                       src
                     }
                   }

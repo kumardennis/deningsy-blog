@@ -22,9 +22,11 @@ export default function Section2Query(props) {
             edges {
               node {
                 title
+                publishedAt
+                readTime
                 mainImage {
                   asset {
-                    fluid(maxHeight: 130, maxWidth: 230) {
+                    fluid(maxHeight: 450) {
                       src
                     }
                   }

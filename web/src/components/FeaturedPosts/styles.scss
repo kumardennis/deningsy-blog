@@ -1,7 +1,30 @@
-.carousel {
-	box-shadow: 0 0 10px $dark-grey;
+.carousel-container {
 
-	.carousel-item > img {
-		height: 300px;
+	@media (max-width: $smallScreen) {
+		max-width: 100%;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+	.topic {
+		@media (max-width: $smallScreen) {
+			padding-left: 15px;
+		}
+	}
+
+	.carousel {
+		box-shadow: 0 0 10px $dark-grey;
+
+		.carousel-item {
+			background-color: black;
+			
+			img{
+				opacity: 0.5;
+			}
+		}
+
+	
+		.carousel-item > img {
+			height: 300px;
+		}
 	}
 }

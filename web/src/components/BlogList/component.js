@@ -19,6 +19,9 @@ const BlogList = ({query}) => {
               slug={
                 post.node.categories[0].title.toLowerCase() + '/' + post.node.slug.current + '/'
               }
+              publishedAt={post.node.publishedAt}
+              readTime={post.node.readTime}
+              category={post.node.categories[0].title}
             >
               <BlockContent blocks={post.node._rawExcerpt} />
             </BlogListItem>

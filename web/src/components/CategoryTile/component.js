@@ -27,7 +27,7 @@ const CategoryTile = ({title, imgSrc, description, to}) => {
       onMouseLeave={mouseLeave}
     >
       <Card.Title>
-        <AniLink className='category-tile-link' bg='#414141' cover direction='right' to={to}>
+        <AniLink className='light-ani-link' bg='#414141' cover direction='right' to={to}>
           {title}
         </AniLink>
       </Card.Title>

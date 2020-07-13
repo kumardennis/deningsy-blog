@@ -13,7 +13,7 @@ const BlogCard = ({imgSrc, title, children, slug, category, readTime, publishedA
       <Card.Img variant='top' src={imgSrc} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
-        <div className='blog-details-2'>
+        <div className='blog-details-small'>
           <Row>
             <Col>
               {category} &#8226;{' '}

@@ -4,18 +4,31 @@ import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
+import Moment from 'react-moment';
+import 'moment-timezone';
 import './styles.scss';
 
-const BlogListItem = ({imgSrc, title, children, slug}) => {
+const BlogListItem = ({imgSrc, title, children, slug, category, readTime, publishedAt}) => {
   return (
     <div>
       <Row className='blog-list-item'>
-        <Col md={3}>
+        <Col lg>
           <Image src={imgSrc} thumbnail />
         </Col>
         <Col md={9} className='blog-list-col'>
           <Card.Body>
             <Card.Title>{title}</Card.Title>
+            <div className='blog-details-small'>
+              <Row>
+                <Col>
+                  {category} &#8226;{' '}
+                  <Moment format='llll' local>
+                    {publishedAt}
+                  </Moment>{' '}
+                  &#8226; {readTime}min read
+                </Col>
+              </Row>
+            </div>
             <Card.Text>{children}</Card.Text>
           </Card.Body>
           <div className='blog-list-btn-container'>
