@@ -31,11 +31,11 @@ const BlogListItem = ({imgSrc, title, children, slug, category, readTime, publis
             </div>
             <Card.Text>{children}</Card.Text>
           </Card.Body>
-          <div className='blog-list-btn-container'>
+          <Card.Body className='blog-list-btn-container'>
             <AniLink className='link-to-post' bg='#414141' cover direction='right' to={slug}>
               Read the blog >
             </AniLink>
-          </div>
+          </Card.Body>
         </Col>
       </Row>
     </div>

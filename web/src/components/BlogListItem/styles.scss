@@ -1,6 +1,6 @@
 .blog-list-item {
 	background-color: $light-grey;
-	padding: 2rem;
+	padding: 0 !important;
 	border-radius: $border-radius;
 	height: fit-content;
 	box-shadow: 0 0 10px $dark-grey;
@@ -10,20 +10,20 @@
 		margin-bottom: 2rem;
 	}
 
-	.img-thumbnail {
-		border-color: $font-light-color !important;
-		background-color: $dark-grey !important;
+	.col-lg {
+		margin: 0 !important;
+		padding: 0;
+
+		.img-thumbnail {
+			border: none !important ;
+			background-color: $dark-grey !important;
+			padding: 0;
+		}
 	}
 
 	.blog-list-col {
-		.blog-list-btn-container {
-			display: flex !important;
-			justify-content: flex-end;
-			padding-bottom: 0;
-			min-width: fit-content;
+		padding-top: 1rem;
 
-
-		}
 	}
 
 	

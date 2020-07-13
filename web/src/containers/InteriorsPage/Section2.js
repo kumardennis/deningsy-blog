@@ -26,7 +26,7 @@ export default function Section2Query(props) {
                 readTime
                 mainImage {
                   asset {
-                    fluid(maxHeight: 450) {
+                    fluid(maxHeight: 550) {
                       src
                     }
                   }
