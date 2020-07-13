@@ -1,13 +1,46 @@
 import React from 'react';
+import {StaticQuery, graphql} from 'gatsby';
+import BlogCards from 'components/BlogCards/component';
 
-import CategoryTiles from 'components/CategoryTiles/component';
-
-const Section3 = (props) => {
+const Section3 = ({data}) => {
   return (
     <section className='section'>
-      <CategoryTiles />
+      <BlogCards query={data} topic='Recent blogs' />
     </section>
   );
 };
 
-export default Section3;
+export default function Section3Query(props) {
+  return (
+    <StaticQuery
+      query={graphql`
+        query {
+          allSanityPost(sort: {fields: publishedAt, order: ASC}) {
+            edges {
+              node {
+                slug {
+                  current
+                }
+                categories {
+                  title
+                }
+                title
+                readTime
+                publishedAt
+                _rawExcerpt(resolveReferences: {maxDepth: 10})
+                mainImage {
+                  asset {
+                    fluid(maxHeight: 400) {
+                      src
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      `}
+      render={(data) => <Section3 data={data} {...props} />}
+    />
+  );
+}
