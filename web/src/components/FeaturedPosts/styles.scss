@@ -1,30 +1,34 @@
-.carousel-container {
-
+.slider {
+	background-color: black;
+	box-shadow: 0 0 10px $dark-grey;
+	height: 500px !important;
 	@media (max-width: $smallScreen) {
 		max-width: 100%;
 		padding-left: 0 !important;
 		padding-right: 0 !important;
+		height: 300px !important;
 	}
-	.topic {
-		@media (max-width: $smallScreen) {
-			padding-left: 15px;
+
+	.previousButton, .nextButton {
+
+		svg > polygon {
+			fill: $font-light-color !important;
 		}
 	}
 
-	.carousel {
-		box-shadow: 0 0 10px $dark-grey;
 
-		.carousel-item {
-			background-color: black;
-			
 			img{
 				opacity: 0.5;
-			}
-		}
+				object-fit: cover;
+				width: 1920px;
+				height: 700px;
 
+				@media (max-width: $smallScreen) {
+					height: 400px;
+				}
+			}
 	
-		.carousel-item > img {
-			height: 300px;
-		}
-	}
+
+
+
 }

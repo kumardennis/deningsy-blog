@@ -31,7 +31,7 @@ export default function Section2Query(props) {
                 _rawExcerpt(resolveReferences: {maxDepth: 10})
                 mainImage {
                   asset {
-                    fluid(maxHeight: 400) {
+                    fluid(maxHeight: 800, maxWidth: 1920) {
                       src
                     }
                   }
