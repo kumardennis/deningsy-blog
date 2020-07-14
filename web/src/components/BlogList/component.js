@@ -15,8 +15,8 @@ const BlogList = ({query}) => {
         {posts.map((post, id) => {
           return (
             <ScrollAnimation
-              offset={90}
-              delay={id * 200}
+              offset={150}
+              delay={id * 150}
               animateIn='animate__animated animate__fadeInUp'
               animateOnce
             >

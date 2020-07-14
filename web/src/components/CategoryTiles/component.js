@@ -10,12 +10,12 @@ import './styles.scss';
 const CategoryTiles = () => {
   return (
     <Container>
-      <ScrollAnimation offset={90} animateIn='animate__animated animate__fadeInUp' animateOnce>
+      <ScrollAnimation offset={150} animateIn='animate__animated animate__fadeInUp' animateOnce>
         <h3 className='topic'>Explore categories</h3>
       </ScrollAnimation>
       <Row>
         <ScrollAnimation
-          offset={90}
+          offset={150}
           delay={0}
           animateIn='animate__animated animate__fadeInUp'
           animateOnce
@@ -30,7 +30,7 @@ const CategoryTiles = () => {
           </Col>
         </ScrollAnimation>
         <ScrollAnimation
-          offset={90}
+          offset={150}
           delay={200}
           animateIn='animate__animated animate__fadeInUp'
           animateOnce
@@ -47,7 +47,7 @@ const CategoryTiles = () => {
       </Row>
       <Row>
         <ScrollAnimation
-          offset={90}
+          offset={150}
           delay={400}
           animateIn='animate__animated animate__fadeInUp'
           animateOnce
@@ -62,7 +62,7 @@ const CategoryTiles = () => {
           </Col>
         </ScrollAnimation>
         <ScrollAnimation
-          offset={90}
+          offset={150}
           delay={600}
           animateIn='animate__animated animate__fadeInUp'
           animateOnce

@@ -12,14 +12,14 @@ const BlogCards = ({query, topic}) => {
 
   return (
     <Container>
-      <ScrollAnimation offset={90} animateIn='animate__animated animate__fadeInUp' animateOnce>
+      <ScrollAnimation offset={150} animateIn='animate__animated animate__fadeInUp' animateOnce>
         <h3 className='topic'>{topic}</h3>
       </ScrollAnimation>
       <CardGroup>
         {base.map((post, id) => {
           return (
             <ScrollAnimation
-              offset={90}
+              offset={150}
               delay={id * 200}
               animateIn='animate__animated animate__fadeInUp'
               animateOnce

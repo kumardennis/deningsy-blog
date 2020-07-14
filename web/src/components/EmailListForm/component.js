@@ -49,9 +49,9 @@ const EmailListForm = () => {
 
   return (
     <div>
-      <ScrollAnimation offset={90} animateIn='animate__animated animate__fadeInUp' animateOnce>
+      <ScrollAnimation offset={150} animateIn='animate__animated animate__fadeInUp' animateOnce>
         <Container>
-          <ScrollAnimation offset={90} animateIn='animate__animated animate__fadeInUp' animateOnce>
+          <ScrollAnimation offset={150} animateIn='animate__animated animate__fadeInUp' animateOnce>
             <h3 className='topic'>Subscribe to our mailing list!</h3>
           </ScrollAnimation>
 
