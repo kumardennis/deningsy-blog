@@ -95,3 +95,8 @@
 			position: static;
 		}
 	}
+
+	.comment-section {
+		background-color: $light-grey;
+		box-shadow: 0 0 10px $dark-grey;
+	}

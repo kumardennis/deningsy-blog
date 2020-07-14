@@ -26,6 +26,7 @@ import Moment from 'react-moment';
 import 'moment-timezone';
 import ScrollAnimation from 'react-animate-on-scroll';
 import 'animate.css/animate.min.css';
+import {DiscussionEmbed} from 'disqus-react';
 
 import './blog-post.scss';
 
@@ -46,6 +47,14 @@ const BlogPost = ({data}) => {
     'https://www.youtube.com/channel/UC4Q4TfCjSX1sJC-IO86oc2Q',
     'https://www.instagram.com/kumardennis',
   ];
+
+  const disqusSlug = base.categories[0].title.toLowerCase() + '/' + base.slug.current + '/';
+  const disqusTitle = base.title;
+
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: {identifier: disqusSlug, disqusTitle},
+  };
 
   return (
     <Layout>
@@ -141,6 +150,13 @@ const BlogPost = ({data}) => {
           </div>
         </Col>
       </Row>
+      <Row>
+        <Col lg>
+          <Container className='comment-section'>
+            <DiscussionEmbed {...disqusConfig} />
+          </Container>
+        </Col>
+      </Row>
     </Layout>
   );
 };
@@ -154,6 +170,9 @@ export const query = graphql`
         node {
           title
           publishedAt
+          slug {
+            current
+          }
           categories {
             title
           }
