@@ -18,17 +18,17 @@ const Header = () => {
       <Navbar.Collapse id='basic-navbar-nav'>
         <Nav className='mr-auto ml-auto'>
           <Nav.Item>
-            <AniLink hex='#414141' paintDrip direction='right' to='/'>
+            <AniLink hex='#333333' paintDrip direction='right' to='/'>
               Home
             </AniLink>
           </Nav.Item>
           <Nav.Item>
-            <AniLink bg='#414141' cover direction='right' to='/interiors/'>
+            <AniLink bg='#333333' cover direction='right' to='/interiors/'>
               Interiors
             </AniLink>
           </Nav.Item>
           <Nav.Item>
-            <AniLink bg='#414141' cover direction='right' to='/fitness/'>
+            <AniLink bg='#333333' cover direction='right' to='/fitness/'>
               Fitness
             </AniLink>
           </Nav.Item>

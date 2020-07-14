@@ -87,3 +87,11 @@
 		}
 	
 	}
+
+	.email-container {
+		position: fixed;
+
+		@media(max-width: $mediumScreen) {
+			position: static;
+		}
+	}

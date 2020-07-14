@@ -6,6 +6,8 @@ import Container from 'react-bootstrap/Container';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ScrollAnimation from 'react-animate-on-scroll';
+import 'animate.css/animate.min.css';
 import './styles.scss';
 
 const EmailListForm = () => {
@@ -47,54 +49,60 @@ const EmailListForm = () => {
 
   return (
     <div>
-      <Container>
-        <h3 className='topic'>Subscribe to our mailing list!</h3>
-        <Container className='form-container'>
-          <Form onSubmit={handleSubmit}>
-            <Form.Row>
-              <Col>
-                <Form.Group controlId='formBasicFName'>
-                  <Form.Label>First name</Form.Label>
-                  <Form.Control
-                    onChange={handleFnameChange}
-                    type='text'
-                    placeholder='Enter first name'
-                  />
-                </Form.Group>
-              </Col>
-              <Col>
-                <Form.Group controlId='formBasicLName'>
-                  <Form.Label>Last name</Form.Label>
-                  <Form.Control
-                    onChange={handleLnameChange}
-                    type='text'
-                    placeholder='Enter last name'
-                  />
-                </Form.Group>
-              </Col>
-            </Form.Row>
-            <Form.Row>
-              <Col>
-                <Form.Group controlId='formBasicEmail'>
-                  <Form.Label>Email address</Form.Label>
-                  <Form.Control
-                    onChange={handleEmailChange}
-                    type='email'
-                    placeholder='Enter email'
-                  />
-                  <Form.Text className='text-muted'>
-                    We'll never share your email with anyone else.
-                  </Form.Text>
-                </Form.Group>
-              </Col>
-            </Form.Row>
+      <ScrollAnimation offset={90} animateIn='animate__animated animate__fadeInUp' animateOnce>
+        <Container>
+          <ScrollAnimation offset={90} animateIn='animate__animated animate__fadeInUp' animateOnce>
+            <h3 className='topic'>Subscribe to our mailing list!</h3>
+          </ScrollAnimation>
 
-            <Button className='custom-btn' type='submit'>
-              Submit
-            </Button>
-          </Form>
+          <Container className='form-container'>
+            <Form onSubmit={handleSubmit}>
+              <Form.Row>
+                <Col>
+                  <Form.Group controlId='formBasicFName'>
+                    <Form.Label>First name</Form.Label>
+                    <Form.Control
+                      onChange={handleFnameChange}
+                      type='text'
+                      placeholder='Enter first name'
+                    />
+                  </Form.Group>
+                </Col>
+
+                <Col>
+                  <Form.Group controlId='formBasicLName'>
+                    <Form.Label>Last name</Form.Label>
+                    <Form.Control
+                      onChange={handleLnameChange}
+                      type='text'
+                      placeholder='Enter last name'
+                    />
+                  </Form.Group>
+                </Col>
+              </Form.Row>
+              <Form.Row>
+                <Col>
+                  <Form.Group controlId='formBasicEmail'>
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control
+                      onChange={handleEmailChange}
+                      type='email'
+                      placeholder='Enter email'
+                    />
+                    <Form.Text className='text-muted'>
+                      We'll never share your email with anyone else.
+                    </Form.Text>
+                  </Form.Group>
+                </Col>
+              </Form.Row>
+
+              <Button className='custom-btn' type='submit'>
+                Submit
+              </Button>
+            </Form>
+          </Container>
         </Container>
-      </Container>
+      </ScrollAnimation>
       <ToastContainer />
     </div>
   );

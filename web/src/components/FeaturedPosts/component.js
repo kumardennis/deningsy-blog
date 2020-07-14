@@ -24,7 +24,7 @@ const FeaturedPosts = ({query}) => {
               <h3>
                 <AniLink
                   className='light-ani-link'
-                  bg='#414141'
+                  bg='#333333'
                   cover
                   direction='right'
                   to={

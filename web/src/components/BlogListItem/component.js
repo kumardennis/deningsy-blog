@@ -32,7 +32,7 @@ const BlogListItem = ({imgSrc, title, children, slug, category, readTime, publis
             <Card.Text>{children}</Card.Text>
           </Card.Body>
           <Card.Body className='blog-list-btn-container'>
-            <AniLink className='link-to-post' bg='#414141' cover direction='right' to={slug}>
+            <AniLink className='link-to-post' bg='#333333' cover direction='right' to={slug}>
               Read the blog >
             </AniLink>
           </Card.Body>

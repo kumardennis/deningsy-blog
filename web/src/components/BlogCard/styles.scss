@@ -3,6 +3,11 @@
 	border: none !important;
 	box-shadow: 0 0 10px $dark-grey;
 	margin: 1rem;
+	max-width: 20rem;
+
+	@media (max-width: $mediumScreen) {
+		max-width: max-content;
+	}
 	
 	.card-body {
 		background-color: $light-grey;
