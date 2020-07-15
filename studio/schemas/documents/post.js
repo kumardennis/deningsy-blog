@@ -73,6 +73,12 @@ export default {
       title: 'Body'
     },
     {
+      title: 'Keywords',
+      name: 'keywords',
+      type: 'array',
+      of: [{type: 'string'}]
+    },
+    {
       name: 'readTime',
       type: 'number',
       title: 'Time it takes to read the blogpost in minutes'

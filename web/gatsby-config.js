@@ -8,6 +8,13 @@ const clientConfig = require('./client-config');
 const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = {
+  siteMetadata: {
+    title: 'Deningsy Blogs',
+    excerpt:
+      'Read about interior decorations, smart interior planning, fitness, fashion and more...',
+    author: 'deningsy',
+    url: 'https://www.denignsy.com',
+  },
   plugins: [
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',

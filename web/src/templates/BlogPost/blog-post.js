@@ -27,6 +27,7 @@ import 'moment-timezone';
 import ScrollAnimation from 'react-animate-on-scroll';
 import 'animate.css/animate.min.css';
 import {DiscussionEmbed} from 'disqus-react';
+import SEO from 'components/SEO/component';
 
 import './blog-post.scss';
 
@@ -58,6 +59,11 @@ const BlogPost = ({data}) => {
 
   return (
     <Layout>
+      <SEO
+        excerpt={base._rawExcerpt[0].children[0].text}
+        keywords={base.keywords}
+        title={base.title}
+      />
       <Row>
         <Col />
         <Col lg={8}>
@@ -189,7 +195,9 @@ export const query = graphql`
               }
             }
           }
+          _rawExcerpt
           _rawBody
+          keywords
           mainImage {
             asset {
               fluid(maxWidth: 1920) {
