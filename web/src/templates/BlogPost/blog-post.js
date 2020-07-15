@@ -67,7 +67,7 @@ const BlogPost = ({data}) => {
       <Row>
         <Col />
         <Col lg={8}>
-          <ScrollAnimation offset={150} animateIn='animate__animated animate__fadeInUp' animateOnce>
+          <ScrollAnimation offset={90} animateIn='animate__animated animate__fadeInUp' animateOnce>
             <Container className='blog-post-container'>
               <Image src={base.mainImage.asset.fluid.src} fluid />
 

@@ -7,7 +7,7 @@ import './styles.scss';
 const LandingBanner = () => {
   return (
     <Jumbotron>
-      <ScrollAnimation offset={100} animateIn='animate__animated animate__slideInLeft' animateOnce>
+      <ScrollAnimation offset={90} animateIn='animate__animated animate__slideInLeft' animateOnce>
         <h1 className='bp3-heading landing-title'>Deningsy Blogs</h1>
       </ScrollAnimation>
       <h2>
