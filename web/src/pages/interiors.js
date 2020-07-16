@@ -8,7 +8,7 @@ const InteriorsPage = () => {
   return (
     <Layout>
       <SEO
-        excerpt={'List of interior blogs'}
+        excerpt={'Here you can find blogs about how we advice to plan your places interior'}
         keywords={['interior', 'blogs', 'interior decoration']}
         title={'Interior'}
       />

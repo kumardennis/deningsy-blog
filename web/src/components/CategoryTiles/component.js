@@ -23,7 +23,7 @@ const CategoryTiles = () => {
           <Col lg>
             <CategoryTile
               title='Interior decorations and smart planning'
-              description='Here you can find posts about how we advice to plan your places interior'
+              description='Here you can find blogs about how we advice to plan your places interior'
               // imgSrc={'../../images/interior-light.jpg'}
               to='/interiors/'
             />
@@ -38,7 +38,7 @@ const CategoryTiles = () => {
           <Col lg>
             <CategoryTile
               title='Fitness'
-              description='Here you can find posts about how we advice to plan your workouts indoors/outdoors/at-home'
+              description='Here you can find blogs about how we advice to plan your workouts indoors/outdoors/at-home'
               // imgSrc={'../../images/fitness-dark.jpg'}
               to='/fitness/'
             />
@@ -55,7 +55,7 @@ const CategoryTiles = () => {
           <Col lg>
             <CategoryTile
               title='Travel'
-              description='Here you can find posts about how we advice to travel with your child and our experience'
+              description='Here you can find blogs about how we advice to travel with your child and our experience'
               // imgSrc={'../../images/dark-pattern.png'}
               to='/travel/'
             />
@@ -70,7 +70,7 @@ const CategoryTiles = () => {
           <Col lg>
             <CategoryTile
               title='Maternity'
-              description='Here you can find posts about how we advice to deal efficiently while having a child or during preganancy'
+              description='Here you can find blogs about how we advice to deal efficiently while having a child or during preganancy'
               // imgSrc={'../../images/dark-pattern.png'}
               to='/maternity/'
             />

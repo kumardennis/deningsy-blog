@@ -8,7 +8,9 @@ const FitnessPage = () => {
   return (
     <Layout>
       <SEO
-        excerpt={'List of fitness blogs'}
+        excerpt={
+          'Here you can find blogs about how we advice to plan your workouts indoors/outdoors/at-home'
+        }
         keywords={['fitness', 'blogs', 'health']}
         title={'Fitness'}
       />

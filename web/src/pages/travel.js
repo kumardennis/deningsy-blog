@@ -7,7 +7,13 @@ import Section2 from 'containers/TravelPage/Section2';
 const TravelPage = () => {
   return (
     <Layout>
-      <SEO excerpt={'List of travel blogs'} keywords={['travel', 'blogs']} title={'Travel'} />
+      <SEO
+        excerpt={
+          'Here you can find blogs about how we advice to travel with your child and our experience'
+        }
+        keywords={['travel', 'blogs']}
+        title={'Travel'}
+      />
       <Section1 />
       <Section2 />
     </Layout>

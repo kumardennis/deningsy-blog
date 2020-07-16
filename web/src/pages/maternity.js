@@ -8,7 +8,9 @@ const MaternityPage = () => {
   return (
     <Layout>
       <SEO
-        excerpt={'List of maternity blogs'}
+        excerpt={
+          'Here you can find blogs about how we advice to deal efficiently while having a child or during preganancy'
+        }
         keywords={['maternity', 'pregnant', 'baby', 'blogs']}
         title={'Maternity'}
       />
