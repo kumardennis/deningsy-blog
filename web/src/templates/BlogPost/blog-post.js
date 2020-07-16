@@ -88,6 +88,7 @@ const BlogPost = ({data}) => {
                 <Row>
                   <Col xs={1}>
                     <Image
+                      alt={base.authors[0].author.name}
                       className='author-image'
                       src={base.authors[0].author.image.asset.fluid.src}
                     />
