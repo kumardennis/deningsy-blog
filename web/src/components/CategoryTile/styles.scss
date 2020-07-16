@@ -11,6 +11,7 @@
 	transition-duration: 0.5s;
 	border-radius: $border-radius;
 	box-shadow: 0 0 10px $dark-grey;
+	background-image: url('../../images/dark-pattern.png');
 
 	@media (max-width: $smallScreen){
 		width: auto;

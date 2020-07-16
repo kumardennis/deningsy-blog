@@ -48,7 +48,7 @@ const BlogPost = ({data}) => {
     'https://www.instagram.com/kumardennis',
   ];
 
-  const disqusSlug = base.categories[0].title.toLowerCase() + '/' + base.slug.current + '/';
+  const disqusSlug = window.location.pathname;
   const disqusTitle = base.title;
 
   const disqusConfig = {
@@ -67,8 +67,8 @@ const BlogPost = ({data}) => {
         <Col />
         <Col lg={8}>
           <Container className='blog-post-container'>
-            <Image src={base.mainImage.asset.fluid.src} fluid />
-
+            <Image alt={base.mainImage.alt} src={base.mainImage.asset.fluid.src} fluid />
+            <small>{base.mainImage.caption}</small>
             <Container className='content-container'>
               <h2 className='title'>{base.title}</h2>
               <div className='blog-details'>
@@ -114,7 +114,10 @@ const BlogPost = ({data}) => {
               <div className='blog-details-2'>
                 <Row>
                   <Col>
-                    {base.categories[0].title} &#8226; {base.readTime}min read
+                    {base.categories.map((category) => {
+                      return <span>{category.title} &#8226; </span>;
+                    })}{' '}
+                    {base.readTime}min read
                   </Col>
                 </Row>
               </div>
@@ -196,6 +199,8 @@ export const query = graphql`
           _rawBody
           keywords
           mainImage {
+            caption
+            alt
             asset {
               fluid(maxWidth: 1920) {
                 src

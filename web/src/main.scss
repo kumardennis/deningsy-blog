@@ -7,6 +7,10 @@ html, body {
 	background-color: $daisy;
 	background-image: url('../../images/light-pattern.png');
 
+	h3 {
+		font-weight: 700;
+	}
+
 	main {
 		padding-top: 40px;
 		min-height: 100vh;

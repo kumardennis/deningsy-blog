@@ -7,7 +7,7 @@ import Moment from 'react-moment';
 import 'moment-timezone';
 import './styles.scss';
 
-const BlogCard = ({imgSrc, title, children, slug, category, readTime, publishedAt}) => {
+const BlogCard = ({imgSrc, title, children, slug, categories, readTime, publishedAt}) => {
   return (
     <Card className='blog-card'>
       <Card.Img variant='top' src={imgSrc} />
@@ -16,7 +16,9 @@ const BlogCard = ({imgSrc, title, children, slug, category, readTime, publishedA
         <div className='blog-details-small'>
           <Row>
             <Col>
-              {category} &#8226;{' '}
+              {categories.map((category) => {
+                return <span>{category.title} &#8226; </span>;
+              })}{' '}
               <Moment format='llll' local>
                 {publishedAt}
               </Moment>{' '}

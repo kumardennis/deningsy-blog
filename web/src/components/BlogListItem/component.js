@@ -8,7 +8,7 @@ import Moment from 'react-moment';
 import 'moment-timezone';
 import './styles.scss';
 
-const BlogListItem = ({imgSrc, title, children, slug, category, readTime, publishedAt}) => {
+const BlogListItem = ({imgSrc, title, children, slug, categories, readTime, publishedAt}) => {
   return (
     <div>
       <Row className='blog-list-item'>
@@ -21,7 +21,9 @@ const BlogListItem = ({imgSrc, title, children, slug, category, readTime, publis
             <div className='blog-details-small'>
               <Row>
                 <Col>
-                  {category} &#8226;{' '}
+                  {categories.map((category) => {
+                    return <span>{category.title} &#8226; </span>;
+                  })}{' '}
                   <Moment format='llll' local>
                     {publishedAt}
                   </Moment>{' '}

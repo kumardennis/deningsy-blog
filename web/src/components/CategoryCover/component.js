@@ -5,9 +5,9 @@ import './styles.scss';
 const CategoryCover = ({title, description, imgSrc}) => {
   const categoryCardRef = useRef(null);
   useEffect(() => {
-    categoryCardRef.current.style.background = `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('${imgSrc}')`;
-    categoryCardRef.current.style.backgroundSize = 'cover';
-    categoryCardRef.current.style.backgroundPosition = 'center center';
+    // categoryCardRef.current.style.background = `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('${imgSrc}')`;
+    // categoryCardRef.current.style.backgroundSize = 'cover';
+    // categoryCardRef.current.style.backgroundPosition = 'center center';
   });
 
   return (

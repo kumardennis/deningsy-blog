@@ -28,7 +28,7 @@ const BlogList = ({query}) => {
                 }
                 publishedAt={post.node.publishedAt}
                 readTime={post.node.readTime}
-                category={post.node.categories[0].title}
+                categories={post.node.categories}
               >
                 <BlockContent blocks={post.node._rawExcerpt} />
               </BlogListItem>

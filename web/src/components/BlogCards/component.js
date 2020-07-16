@@ -30,7 +30,7 @@ const BlogCards = ({query, topic}) => {
                 slug={
                   post.node.categories[0].title.toLowerCase() + '/' + post.node.slug.current + '/'
                 }
-                category={post.node.categories[0].title}
+                categories={post.node.categories}
                 readTime={post.node.readTime}
                 publishedAt={post.node.publishedAt}
               >

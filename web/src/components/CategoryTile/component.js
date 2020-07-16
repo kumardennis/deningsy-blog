@@ -15,8 +15,8 @@ const CategoryTile = ({title, imgSrc, description, to}) => {
   };
 
   useEffect(() => {
-    cardRef.current.style.background = `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('${imgSrc}')`;
-    cardRef.current.style.backgroundSize = 'cover';
+    // cardRef.current.style.background = `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('${imgSrc}')`;
+    // cardRef.current.style.backgroundSize = 'cover';
   });
 
   return (
