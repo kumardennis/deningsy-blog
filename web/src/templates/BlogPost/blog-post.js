@@ -32,9 +32,10 @@ import './blog-post.scss';
 
 const BlogPost = ({data}) => {
   let currentUrl = '';
-
+  let disqusSlug = '';
   if (typeof window !== 'undefined') {
     currentUrl = window.location.href;
+    disqusSlug = window.location.pathname;
   }
 
   const FollowAt = loadable(() => import('react-social-media-follow'));
@@ -48,7 +49,6 @@ const BlogPost = ({data}) => {
     'https://www.instagram.com/kumardennis',
   ];
 
-  const disqusSlug = window.location.pathname;
   const disqusTitle = base.title;
 
   const disqusConfig = {
