@@ -9,7 +9,7 @@
 			max-width: 100% !important;
 		}
 		@media (min-width: $smallScreen) and (max-width: $mediumScreen) {
-			max-width: 80% !important;
+			max-width: 90% !important;
 		}
 	
 		.img-fluid{
@@ -99,4 +99,11 @@
 	.comment-section {
 		background-color: $light-grey;
 		box-shadow: 0 0 10px $dark-grey;
+
+		@media (max-width: $smallScreen) {
+			max-width: 90% !important;
+		}
+		@media (min-width: $smallScreen) and (max-width: $mediumScreen) {
+			max-width: 90% !important;
+		}
 	}

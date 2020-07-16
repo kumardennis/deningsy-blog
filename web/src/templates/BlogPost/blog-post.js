@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Layout from 'components/Layout/component';
 import EmailListForm from 'components/EmailListForm/component';
 import {graphql} from 'gatsby';
@@ -25,17 +25,15 @@ import loadable from '@loadable/component';
 import Moment from 'react-moment';
 import 'moment-timezone';
 import 'animate.css/animate.min.css';
-import {DiscussionEmbed} from 'disqus-react';
 import SEO from 'components/SEO/component';
 
 import './blog-post.scss';
 
 const BlogPost = ({data}) => {
   let currentUrl = '';
-  let disqusSlug = '';
+
   if (typeof window !== 'undefined') {
     currentUrl = window.location.href;
-    disqusSlug = window.location.pathname;
   }
 
   const FollowAt = loadable(() => import('react-social-media-follow'));
@@ -49,12 +47,27 @@ const BlogPost = ({data}) => {
     'https://www.instagram.com/kumardennis',
   ];
 
-  const disqusTitle = base.title;
+  useEffect(() => {
+    window.fbAsyncInit = function () {
+      window.FB.init({
+        appId: '325200228319479',
+        autoLogAppEvents: true,
+        xfbml: true,
+        version: 'v3.0',
+      });
+    };
 
-  const disqusConfig = {
-    shortname: process.env.GATSBY_DISQUS_NAME,
-    config: {identifier: disqusSlug, disqusTitle},
-  };
+    // Load the SDK asynchronously
+    (function (d, s, id) {
+      var js;
+      var fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = '//connect.facebook.net/en_US/sdk.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, 'script', 'facebook-jssdk');
+  });
 
   return (
     <Layout>
@@ -159,7 +172,13 @@ const BlogPost = ({data}) => {
       <Row>
         <Col lg>
           <Container className='comment-section'>
-            <DiscussionEmbed {...disqusConfig} />
+            <div
+              className='fb-comments'
+              data-href={currentUrl}
+              data-numposts='5'
+              data-width='100%'
+              data-mobile
+            />
           </Container>
         </Col>
       </Row>
