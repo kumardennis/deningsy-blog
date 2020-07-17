@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import Layout from 'components/Layout/component';
 import EmailListForm from 'components/EmailListForm/component';
 import {graphql} from 'gatsby';
@@ -26,7 +26,7 @@ import Moment from 'react-moment';
 import 'moment-timezone';
 import 'animate.css/animate.min.css';
 import SEO from 'components/SEO/component';
-
+import ReactWidgetPackComments from 'react-widgetpack-comments';
 import './blog-post.scss';
 
 const BlogPost = ({data}) => {
@@ -41,40 +41,6 @@ const BlogPost = ({data}) => {
   const base = data.allSanityPost.edges[0].node;
 
   const links = [base.authors[0].author.slug.current];
-
-  useEffect(() => {
-    // window.fbAsyncInit = function () {
-    //   window.FB.init({
-    //     appId: '325200228319479',
-    //     autoLogAppEvents: true,
-    //     xfbml: true,
-    //     version: 'v3.0',
-    //   });
-    // };
-    // Load the SDK asynchronously
-    // (function (d, s, id) {
-    //   var js;
-    //   var fjs = d.getElementsByTagName(s)[0];
-    //   if (d.getElementById(id)) return;
-    //   js = d.createElement(s);
-    //   js.id = id;
-    //   js.src = '//connect.facebook.net/en_US/sdk.js';
-    //   fjs.parentNode.insertBefore(js, fjs);
-    // })(document, 'script', 'facebook-jssdk');
-    // const loadMuutForum = () => {
-    //   window.$('#my-community').muut();
-    // };
-    // if (!window.muut) {
-    //   const muutScript = document.createElement('script');
-    //   muutScript.async = true;
-    //   muutScript.defer = true;
-    //   muutScript.src = '//cdn.muut.com/1/moot.min.js';
-    //   muutScript.onload = this.loadMuutForum;
-    //   document.body.appendChild(muutScript);
-    // } else {
-    //   this.loadMuutForum();
-    // }
-  });
 
   return (
     <Layout>
@@ -181,8 +147,7 @@ const BlogPost = ({data}) => {
         <Col lg>
           <Container className='comment-section'>
             <div>
-              <script defer src='https://cdn.commento.io/js/commento.js' />
-              <div id='commento' />
+              <ReactWidgetPackComments id={'26290'} enable />
             </div>
           </Container>
         </Col>
