@@ -48,6 +48,14 @@ html, body {
 			font-size: $mobile-title-font-size;
 		}
 	}
+	.h1-title{
+		font-size: $h1-title-font-size;
+		font-weight: 700;
+
+		@media (max-width: $smallScreen) {
+			font-size: $mobile-h1-title-font-size;
+		}
+	}
 
 	.card-title{
 		font-size: $regular-font-size;

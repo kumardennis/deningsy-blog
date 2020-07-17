@@ -76,9 +76,9 @@ const BlogPost = ({data}) => {
         <Col lg={8}>
           <Container className='blog-post-container'>
             <Image alt={base.mainImage.alt} src={base.mainImage.asset.fluid.src} fluid />
-            <small>{base.mainImage.caption}</small>
+            <small style={{marginLeft: '2rem'}}>{base.mainImage.caption}</small>
             <Container className='content-container'>
-              <h2 className='title'>{base.title}</h2>
+              <h1 className='h1-title'>{base.title}</h1>
               <div className='blog-details'>
                 <Row>
                   <Col xs={1}>
