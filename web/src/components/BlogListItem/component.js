@@ -9,6 +9,7 @@ import 'moment-timezone';
 import './styles.scss';
 
 const BlogListItem = ({imgSrc, title, children, slug, categories, readTime, publishedAt}) => {
+  console.log(title, publishedAt);
   return (
     <div>
       <Row className='blog-list-item'>

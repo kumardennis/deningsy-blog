@@ -15,7 +15,7 @@ export default function Section3Query(props) {
     <StaticQuery
       query={graphql`
         query {
-          allSanityPost(sort: {fields: publishedAt, order: ASC}) {
+          allSanityPost(sort: {fields: publishedAt, order: DESC}) {
             edges {
               node {
                 slug {

@@ -16,7 +16,7 @@ export default function Section2Query(props) {
       query={graphql`
         query {
           allSanityPost(
-            sort: {fields: publishedAt, order: ASC}
+            sort: {fields: publishedAt, order: DESC}
             filter: {categories: {elemMatch: {title: {eq: "Interiors"}}}}
           ) {
             edges {

@@ -16,12 +16,13 @@ export default function Section2Query(props) {
       query={graphql`
         query {
           allSanityPost(
-            sort: {fields: publishedAt, order: ASC}
+            sort: {fields: publishedAt, order: DESC}
             filter: {categories: {elemMatch: {title: {eq: "Fitness"}}}}
           ) {
             edges {
               node {
                 title
+                publishedAt
                 mainImage {
                   asset {
                     fluid(maxHeight: 550) {

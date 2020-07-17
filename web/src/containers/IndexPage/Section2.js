@@ -17,7 +17,7 @@ export default function Section2Query(props) {
         query {
           allSanityPost(
             filter: {featuredPost: {eq: true}}
-            sort: {fields: publishedAt, order: ASC}
+            sort: {fields: publishedAt, order: DESC}
           ) {
             edges {
               node {
