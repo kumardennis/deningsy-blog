@@ -43,25 +43,37 @@ const BlogPost = ({data}) => {
   const links = [base.authors[0].author.slug.current];
 
   useEffect(() => {
-    window.fbAsyncInit = function () {
-      window.FB.init({
-        appId: '325200228319479',
-        autoLogAppEvents: true,
-        xfbml: true,
-        version: 'v3.0',
-      });
-    };
-
+    // window.fbAsyncInit = function () {
+    //   window.FB.init({
+    //     appId: '325200228319479',
+    //     autoLogAppEvents: true,
+    //     xfbml: true,
+    //     version: 'v3.0',
+    //   });
+    // };
     // Load the SDK asynchronously
-    (function (d, s, id) {
-      var js;
-      var fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s);
-      js.id = id;
-      js.src = '//connect.facebook.net/en_US/sdk.js';
-      fjs.parentNode.insertBefore(js, fjs);
-    })(document, 'script', 'facebook-jssdk');
+    // (function (d, s, id) {
+    //   var js;
+    //   var fjs = d.getElementsByTagName(s)[0];
+    //   if (d.getElementById(id)) return;
+    //   js = d.createElement(s);
+    //   js.id = id;
+    //   js.src = '//connect.facebook.net/en_US/sdk.js';
+    //   fjs.parentNode.insertBefore(js, fjs);
+    // })(document, 'script', 'facebook-jssdk');
+    // const loadMuutForum = () => {
+    //   window.$('#my-community').muut();
+    // };
+    // if (!window.muut) {
+    //   const muutScript = document.createElement('script');
+    //   muutScript.async = true;
+    //   muutScript.defer = true;
+    //   muutScript.src = '//cdn.muut.com/1/moot.min.js';
+    //   muutScript.onload = this.loadMuutForum;
+    //   document.body.appendChild(muutScript);
+    // } else {
+    //   this.loadMuutForum();
+    // }
   });
 
   return (
@@ -168,13 +180,10 @@ const BlogPost = ({data}) => {
       <Row>
         <Col lg>
           <Container className='comment-section'>
-            <div
-              className='fb-comments'
-              data-href={currentUrl}
-              data-numposts='5'
-              data-width='100%'
-              data-mobile
-            />
+            <div>
+              <script defer src='https://cdn.commento.io/js/commento.js' />
+              <div id='commento' />
+            </div>
           </Container>
         </Col>
       </Row>
