@@ -13,7 +13,7 @@ const CategoryCover = ({title, description, imgSrc}) => {
   return (
     <Jumbotron ref={categoryCardRef} className='category-cover'>
       <h1 className='bp3-heading cover-title'>{title}</h1>
-      <h2>{description}</h2>
+      <span>{description}</span>
     </Jumbotron>
   );
 };

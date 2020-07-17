@@ -6,7 +6,7 @@
 	background-image: url('../../images/dark-pattern.png');
 
 	.cover-title {
-		font-size: $topic-font-size;
+		font-size: $title-font-size;
 
 		@media (max-width: $smallScreen) {
 			font-size: $mobile-topic-font-size;

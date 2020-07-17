@@ -16,7 +16,7 @@ const BlogListItem = ({imgSrc, title, children, slug, categories, readTime, publ
         <Col lg>
           <Image src={imgSrc} thumbnail />
         </Col>
-        <Col md={8} className='blog-list-col'>
+        <Col md={7} className='blog-list-col'>
           <Card.Body>
             <Card.Title>{title}</Card.Title>
             <div className='blog-details-small'>
