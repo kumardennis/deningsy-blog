@@ -11,7 +11,7 @@ module.exports = {
   siteMetadata: {
     title: 'Deningsy Blogs',
     excerpt:
-      'Read about interior decorations, smart interior planning, fitness, fashion and more...',
+      'Read about interior decorations, smart interior planning, pregnancy, maternity, fitness and more...',
     author: 'deningsy',
     url: 'https://www.denignsy.com',
   },
