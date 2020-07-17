@@ -1,4 +1,5 @@
 .blog-list-item {
+	transition-duration: 0.5s;
 	background-color: $light-grey;
 	padding: 0 !important;
 	border-radius: $border-radius;
@@ -27,4 +28,13 @@
 	}
 
 	
+}
+
+.blog-list-item:hover {
+	background-color: $dark-grey;
+	color: $light-grey;
+
+	.link-to-post {
+		color: $light-grey;
+	}
 }

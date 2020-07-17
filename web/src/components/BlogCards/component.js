@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import BlogCard from 'components/BlogCard/component';
-import CardGroup from 'react-bootstrap/CardGroup';
+import CardColumns from 'react-bootstrap/CardColumns';
 import BlockContent from '@sanity/block-content-to-react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import 'animate.css/animate.min.css';
@@ -15,7 +15,7 @@ const BlogCards = ({query, topic}) => {
       <ScrollAnimation offset={90} animateIn='animate__animated animate__fadeInUp' animateOnce>
         <h3 className='topic'>{topic}</h3>
       </ScrollAnimation>
-      <CardGroup>
+      <CardColumns>
         {base.map((post, id) => {
           return (
             <ScrollAnimation
@@ -23,6 +23,7 @@ const BlogCards = ({query, topic}) => {
               delay={id * 100}
               animateIn='animate__animated animate__fadeInUp'
               animateOnce
+              style={{height: 'fit-content'}}
             >
               <BlogCard
                 imgSrc={post.node.mainImage.asset.fluid.src}
@@ -39,7 +40,7 @@ const BlogCards = ({query, topic}) => {
             </ScrollAnimation>
           );
         })}
-      </CardGroup>
+      </CardColumns>
     </Container>
   );
 };

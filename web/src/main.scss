@@ -79,6 +79,7 @@ html, body {
 	}
 
 	.link-to-post {
+		transition-duration: 0.5s;
 		color: $dark-grey;
 		font-weight: 700;
 	}

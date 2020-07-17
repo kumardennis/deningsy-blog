@@ -11,7 +11,7 @@ const BlogCard = ({imgSrc, title, children, slug, categories, readTime, publishe
   return (
     <Card className='blog-card'>
       <Card.Img variant='top' src={imgSrc} />
-      <Card.Body>
+      <Card.Body className='blog-card-body'>
         <Card.Title>{title}</Card.Title>
         <div className='blog-details-small'>
           <Row>

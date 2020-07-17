@@ -40,12 +40,7 @@ const BlogPost = ({data}) => {
 
   const base = data.allSanityPost.edges[0].node;
 
-  const links = [
-    'https://twitter.com/kumardennis7',
-    'https://www.facebook.com/dennis.kumar1',
-    'https://www.youtube.com/channel/UC4Q4TfCjSX1sJC-IO86oc2Q',
-    'https://www.instagram.com/kumardennis',
-  ];
+  const links = [base.authors[0].author.slug.current];
 
   useEffect(() => {
     window.fbAsyncInit = function () {
@@ -205,6 +200,9 @@ export const query = graphql`
           readTime
           authors {
             author {
+              slug {
+                current
+              }
               name
               image {
                 asset {
