@@ -27,6 +27,7 @@ import 'moment-timezone';
 import 'animate.css/animate.min.css';
 import SEO from 'components/SEO/component';
 import ReactWidgetPackComments from 'react-widgetpack-comments';
+import imageUrlBuilder from '@sanity/image-url';
 import './blog-post.scss';
 
 const BlogPost = ({data}) => {
@@ -41,6 +42,24 @@ const BlogPost = ({data}) => {
   const base = data.allSanityPost.edges[0].node;
 
   const links = [base.authors[0].author.slug.current];
+
+  const urlFor = (source) => {
+    return imageUrlBuilder({projectId: 'tu4ms11l', dataset: 'production'}).image(source);
+  };
+
+  const serializers = {
+    types: {
+      mainImage: (props) => (
+        <Image
+          fluid
+          style={{maxWidth: '1000px', height: 'auto'}}
+          rounded
+          alt={props.node.alt}
+          src={urlFor(props.node.asset).width(1000).url()}
+        />
+      ),
+    },
+  };
 
   return (
     <Layout>
@@ -109,7 +128,7 @@ const BlogPost = ({data}) => {
                 </Row>
               </div>
               <div className='content'>
-                <BlockContent blocks={base._rawBody} />
+                <BlockContent serializers={serializers} blocks={base._rawBody} />
               </div>
               <div className='social-sharing'>
                 <span className='social-sharing-text'>Want to share it?</span>
