@@ -48,6 +48,13 @@ const BlogPost = ({data}) => {
   };
 
   const serializers = {
+    marks: {
+      link: (props) => (
+        <a target='_blank' href={props.mark.href}>
+          {props.children[0]}
+        </a>
+      ),
+    },
     types: {
       mainImage: (props) => (
         <Image
