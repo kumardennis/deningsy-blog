@@ -3,7 +3,7 @@ import EmailListForm from 'components/EmailListForm/component';
 
 const Section5 = () => {
   return (
-    <section>
+    <section className='section'>
       <EmailListForm />
     </section>
   );

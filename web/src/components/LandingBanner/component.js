@@ -11,7 +11,7 @@ const LandingBanner = () => {
         <h1 className='bp3-heading landing-title'>Deningsy Blogs</h1>
       </ScrollAnimation>
       <h2>
-        Read about interior decorations, smart interior planning, fitness, fashion and more...
+        Read about interior decorations, smart interior planning, fitness, maternity and more...
       </h2>
     </Jumbotron>
   );

@@ -10,7 +10,7 @@ const Header = () => {
       <Navbar.Brand
         className='ml-auto d-none d-lg-block'
         style={{fontFamily: 'Courgette'}}
-        href='#home'
+        href='/'
       >
         Deningsy Blogs
       </Navbar.Brand>
