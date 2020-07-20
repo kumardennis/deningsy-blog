@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Layout from 'components/Layout/component';
 import EmailListForm from 'components/EmailListForm/component';
 import {graphql} from 'gatsby';
@@ -68,6 +68,18 @@ const BlogPost = ({data}) => {
     },
   };
 
+  useEffect(() => {
+    const script = document.createElement('script');
+
+    script.type = 'text/javascript';
+    script.text = `try {
+      window._mNHandle.queue.push(function () {
+        window._mNDetails.loadTag('754477964', '300x250', '754477964');
+      });
+    } catch (error) {}`;
+    document.getElementById('754477964').appendChild(script);
+  }, []);
+
   return (
     <Layout>
       <SEO
@@ -81,6 +93,7 @@ const BlogPost = ({data}) => {
           <Container className='blog-post-container'>
             <Image alt={base.mainImage.alt} src={base.mainImage.asset.fluid.src} fluid />
             <small style={{marginLeft: '2rem'}}>{base.mainImage.caption}</small>
+            <div id='754477964' />
             <Container className='content-container'>
               <h1 className='h1-title'>{base.title}</h1>
               <div className='blog-details'>
