@@ -4,12 +4,14 @@ import Header from 'components/Header/component';
 import Footer from 'components/Footer/component';
 
 const Layout = ({children}) => {
+  const url = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+    script.src = url;
     script.async = true;
     script.dataAdClient = 'ca-pub-3900934487984615';
-  });
+    document.head.appendChild(script);
+  }, [url]);
   return (
     <div>
       <Header />
