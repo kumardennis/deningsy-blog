@@ -24,12 +24,13 @@ const Footer = () => {
 
             <Nav.Item>
               <Iubenda id={myPolicy}>Privacy Policy</Iubenda>
-            </Nav.Item>
-            <Nav.Item>
+              <br />
               <Iubenda id={myPolicy} type='cookie' styling='nostyle'>
                 Cookie Policy
               </Iubenda>
             </Nav.Item>
+
+            <Nav.Link href='mailto:info@deningsy.com'>Contact us</Nav.Link>
 
             <Button variant='outline-light' onClick={() => setModalShow(true)}>
               About us
