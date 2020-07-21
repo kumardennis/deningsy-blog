@@ -12,7 +12,7 @@ const Header = () => {
         style={{fontFamily: 'Courgette'}}
         href='/'
       >
-        Deningsy Blogs
+        Deningsy
       </Navbar.Brand>
       <Navbar.Toggle aria-controls='basic-navbar-nav' />
       <Navbar.Collapse id='basic-navbar-nav'>

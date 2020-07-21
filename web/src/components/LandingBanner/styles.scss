@@ -6,9 +6,19 @@
 	color: $font-light-color;
 	border-radius: 0 !important;
 
+	.landing-title-container {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+
+		span {
+			font-family: Courgette;
+		}
+	}
 	.landing-title {
 		font-family: Courgette;
 		font-size: $landing-banner-heading-size;
+		max-width: fit-content;
 
 		@media (max-width: $smallScreen) {
 			font-size: $mobile-landing-banner-heading-size;

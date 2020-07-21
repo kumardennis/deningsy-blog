@@ -43,7 +43,7 @@ const Footer = () => {
           style={{fontFamily: 'Courgette'}}
           href='#home'
         >
-          Deningsy Blogs
+          Deningsy
         </Navbar.Brand>
       </Navbar>
     </div>
