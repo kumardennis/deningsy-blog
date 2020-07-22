@@ -16,6 +16,7 @@ const Layout = ({children}) => {
     <div>
       <Header />
       <CookieConsent
+        acceptOnScroll
         location='bottom'
         enableDeclineButton
         buttonText=' Accept'

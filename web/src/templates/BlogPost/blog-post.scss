@@ -60,14 +60,23 @@
 			margin-top: 2rem;
 
 			div {
+				p{
+					margin-bottom: 0.5rem !important;
+				}
 				p:empty {
-					margin: 3rem !important;
+					padding: 1rem !important;
 				  }
 				  
 				h2,h3 {
-					margin-top: 2rem !important;
+					margin-top: 3rem !important;
 					margin-bottom: 1rem !important;
 					font-weight: 700;
+				}
+				h2 {
+					font-size: 40px;
+				}
+				h3 {
+					font-size: 35px;
 				}
 			}
 		}
