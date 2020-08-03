@@ -86,7 +86,13 @@ const BlogPost = ({data}) => {
         excerpt={base._rawExcerpt[0].children[0].text}
         keywords={base.keywords}
         title={base.title}
-      />
+      >
+        <script
+          data-ad-client='ca-pub-3900934487984615'
+          async
+          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+        />
+      </SEO>
       <Row>
         <Col />
         <Col lg={8}>

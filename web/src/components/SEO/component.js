@@ -11,7 +11,7 @@ import {Helmet} from 'react-helmet';
 import {useStaticQuery, graphql} from 'gatsby';
 import favicon from '../../images/favicon_io/favicon.ico';
 
-function SEO({excerpt, lang, keywords, title}) {
+function SEO({excerpt, lang, keywords, title, children}) {
   const {site} = useStaticQuery(
     graphql`
       query {
@@ -89,6 +89,7 @@ function SEO({excerpt, lang, keywords, title}) {
       <meta property='article:published_time' content='2014-08-12T00:01:56+00:00' />
       <meta property='article:author' content='CNN Karla Cripps' />
       <meta name='p:domain_verify' content='e1a1ced6d6255b16537b5a90d9f5d72f' />
+      {children}
     </Helmet>
   );
 }
