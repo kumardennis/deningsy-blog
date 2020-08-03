@@ -11,7 +11,13 @@ import Section5 from 'containers/IndexPage/Section5';
 const IndexPage = (props) => {
   return (
     <Layout>
-      <SEO />
+      <SEO>
+        <script
+          data-ad-client='ca-pub-3900934487984615'
+          async
+          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+        />
+      </SEO>
       <Section1 />
       <Section2 />
       <Section3 />

@@ -11,7 +11,13 @@ const InteriorsPage = () => {
         excerpt={'Here you can find blogs about how we advice to plan your places interior'}
         keywords={['interior', 'blogs', 'interior decoration']}
         title={'Interior'}
-      />
+      >
+        <script
+          data-ad-client='ca-pub-3900934487984615'
+          async
+          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+        />
+      </SEO>
       <Section1 />
       <Section2 />
     </Layout>

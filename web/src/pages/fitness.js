@@ -13,7 +13,13 @@ const FitnessPage = () => {
         }
         keywords={['fitness', 'blogs', 'health']}
         title={'Fitness'}
-      />
+      >
+        <script
+          data-ad-client='ca-pub-3900934487984615'
+          async
+          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+        />
+      </SEO>
       <Section1 />
       <Section2 />
     </Layout>
