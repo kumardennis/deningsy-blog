@@ -42,15 +42,15 @@ html, body {
 
 	.title{
 		font-size: $title-font-size;
-		font-weight: 700;
-
+		font-family : Bebas Neue;
 		@media (max-width: $smallScreen) {
 			font-size: $mobile-title-font-size;
 		}
 	}
 	.h1-title{
 		font-size: $h1-title-font-size;
-		font-weight: 700;
+		// font-weight: 700;
+		font-family : Bebas Neue;
 
 		@media (max-width: $smallScreen) {
 			font-size: $mobile-h1-title-font-size;
@@ -59,7 +59,7 @@ html, body {
 
 	.card-title{
 		font-size: $title-font-size;
-		font-weight: 700;
+		font-family : Bebas Neue;
 
 		@media (max-width: $smallScreen) {
 			font-size: $mobile-regular-font-size;
