@@ -1,109 +1,112 @@
-@import "~bootstrap/scss/bootstrap";
-html, body {
-	font-family : Manjari;
-	margin:0;
-	padding:0;
-	width: 100%;
-	background-color: $daisy;
-	background-image: url('../../images/light-pattern.png');
+@import '~bootstrap/scss/bootstrap';
+html,
+body {
+  font-family: Manjari;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: $daisy;
+  background-image: url('../../images/light-pattern.png');
 
-	h3 {
-		font-weight: 700;
-	}
+  h3 {
+    font-weight: 700;
+  }
 
-	main {
-		padding-top: 40px;
-		min-height: 100vh;
-	}
+  main {
+    padding-top: 40px;
+    min-height: 100vh;
+  }
 
-	.section {
-		margin-bottom: 5rem;
-	}
+  .section {
+    margin-bottom: 5rem;
+  }
 
-	.jumbotron {
-		box-shadow: 0 5px 10px $dark-grey;
-	}
+  .jumbotron {
+    box-shadow: 0 5px 10px $dark-grey;
+  }
 
-	.topic{
-		font-size: $topic-font-size;
-		color: $dark-grey;
-		margin-bottom: 1rem;
-		font-weight: 700;
+  .topic {
+    font-size: $topic-font-size;
+    color: $dark-grey;
+    margin-bottom: 1rem;
+    font-weight: 700;
 
-		@media (max-width: $smallScreen){
-			font-size: $mobile-topic-font-size;
-		}
-	}
+    @media (max-width: $smallScreen) {
+      font-size: $mobile-topic-font-size;
+    }
+  }
 
-	.container {
-		margin-top: 2rem;
-		margin-bottom: 2rem;
-	}
+  .container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 
-	.title{
-		font-size: $title-font-size;
-		font-family : Bebas Neue;
-		word-spacing: 3px;
-		@media (max-width: $smallScreen) {
-			font-size: $mobile-title-font-size;
-		}
-	}
-	.h1-title{
-		font-size: $h1-title-font-size;
-		word-spacing: 3px;
-		font-family : Bebas Neue;
-		@media (max-width: $smallScreen) {
-			font-size: $mobile-h1-title-font-size;
-		}
-	}
+  .title {
+    font-size: $title-font-size;
+    font-family: Bebas Neue;
+    word-spacing: 3px;
+    @media (max-width: $smallScreen) {
+      font-size: $mobile-title-font-size;
+    }
+  }
+  .h1-title {
+    font-size: $h1-title-font-size;
+    word-spacing: 3px;
+    font-family: Bebas Neue;
+    @media (max-width: $smallScreen) {
+      font-size: $mobile-h1-title-font-size;
+    }
+  }
 
-	.card-title{
-		font-size: $title-font-size;
-		font-family : Bebas Neue;
-		word-spacing: 3px;
-		@media (max-width: $smallScreen) {
-			font-size: $mobile-regular-font-size;
-		}
-	}
+  .card-title {
+    font-size: $title-font-size;
+    font-family: Bebas Neue;
+    word-spacing: 3px;
+    @media (max-width: $smallScreen) {
+      font-size: $mobile-title-font-size !important;
+    }
+  }
 
-	.card-text, .content{
-		font-size: $content-font-size;
+  .card-text,
+  .content {
+    font-size: $content-font-size;
 
-		@media (max-width: $smallScreen) {
-			font-size: $mobile-content-font-size;
-		}
-	}
+    @media (max-width: $smallScreen) {
+      font-size: $mobile-content-font-size !important;
+    }
+  }
 
-	.custom-btn, .custom-btn>a {
-		background-color: $dark-grey;
-		color: $font-light-color;	
-		border: none !important;
-		margin: 1rem;
-		padding: 0.75rem 1rem;
-		border-radius: $border-radius;
-	}
-	.custom-btn:hover {
-		background-color: darken($dark-grey, 5%);
-	}
+  .custom-btn,
+  .custom-btn > a {
+    background-color: $dark-grey;
+    color: $font-light-color;
+    border: none !important;
+    margin: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: $border-radius;
+  }
+  .custom-btn:hover {
+    background-color: darken($dark-grey, 5%);
+  }
 
-	.link-to-post {
-		transition-duration: 0.5s;
-		color: $dark-grey;
-		font-weight: 700;
-	}
+  .link-to-post {
+    transition-duration: 0.5s;
+    color: $dark-grey;
+    font-weight: 700;
+  }
 
-	.light-ani-link {
-		color: $font-light-color;
-	}
-	.blog-details-small {
-		font-size: $smallest-font-size;
-	}
-	.Toastify__toast--error {
-		background-color: rgba(145, 13, 13, 0.9);
-		box-shadow: 0 0 15px #961c15;
-	}
-	.Toastify__toast--success {
-		background-color: rgba(37, 145, 13, 0.9);
-		box-shadow: 0 0 15px #248f0c;
-	}
+  .light-ani-link {
+    color: $font-light-color;
+  }
+  .blog-details-small {
+    font-size: $smallest-font-size;
+  }
+  .Toastify__toast--error {
+    background-color: rgba(145, 13, 13, 0.9);
+    box-shadow: 0 0 15px #961c15;
+  }
+  .Toastify__toast--success {
+    background-color: rgba(37, 145, 13, 0.9);
+    box-shadow: 0 0 15px #248f0c;
+  }
 }

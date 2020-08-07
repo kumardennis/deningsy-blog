@@ -43,6 +43,11 @@ const Header = () => {
               Maternity
             </AniLink>
           </Nav.Item>
+          <Nav.Item>
+            <AniLink bg='#414141' cover direction='right' to='/miscellaneous/'>
+              Miscellaneous
+            </AniLink>
+          </Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
