@@ -11,7 +11,7 @@ import {Helmet} from 'react-helmet';
 import {useStaticQuery, graphql} from 'gatsby';
 import favicon from '../../images/favicon_io/favicon.ico';
 
-function SEO({excerpt, lang, keywords, title, children}) {
+function SEO({excerpt, lang, keywords, title, children, url, published_time, author}) {
   const {site} = useStaticQuery(
     graphql`
       query {
@@ -76,18 +76,12 @@ function SEO({excerpt, lang, keywords, title, children}) {
     >
       <link rel='icon' href={favicon} />
       <meta property='og:type' content='article' />
-      <meta property='og:title' content="Exploring Kyoto's Sagano Bamboo Forest - CNN.com" />
-      <meta
-        property='og:description'
-        content="A constant inclusion on lists of 'forests to see before you die,' here's how to see the real thing."
-      />
-      <meta
-        property='og:url'
-        content='http://www.cnn.com/2014/08/11/travel/sagano-bamboo-forest/'
-      />
-      <meta property='og:site_name' content='CNN.com' />
-      <meta property='article:published_time' content='2014-08-12T00:01:56+00:00' />
-      <meta property='article:author' content='CNN Karla Cripps' />
+      <meta property='og:title' content={title} />
+      <meta property='og:description' content={excerpt} />
+      <meta property='og:url' content={url} />
+      <meta property='og:site_name' content='deningsy.com' />
+      <meta property='article:published_time' content={published_time} />
+      <meta property='article:author' content={author} />
       <meta name='p:domain_verify' content='e1a1ced6d6255b16537b5a90d9f5d72f' />
       {children}
     </Helmet>

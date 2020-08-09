@@ -86,6 +86,9 @@ const BlogPost = ({data}) => {
         excerpt={base._rawExcerpt[0].children[0].text}
         keywords={base.keywords}
         title={base.title}
+        url={window && window.location.href}
+        published_time={base.publishedAt}
+        author={base.authors[0].author.name}
       >
         <script
           data-ad-client='ca-pub-3900934487984615'
