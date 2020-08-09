@@ -86,7 +86,7 @@ const BlogPost = ({data}) => {
         excerpt={base._rawExcerpt[0].children[0].text}
         keywords={base.keywords}
         title={base.title}
-        url={window && window.location.href}
+        url={currentUrl}
         published_time={base.publishedAt}
         author={base.authors[0].author.name}
       >
