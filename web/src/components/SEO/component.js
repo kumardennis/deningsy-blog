@@ -83,6 +83,7 @@ function SEO({excerpt, lang, keywords, title, children, url, published_time, aut
       <meta property='article:published_time' content={published_time} />
       <meta property='article:author' content={author} />
       <meta name='p:domain_verify' content='e1a1ced6d6255b16537b5a90d9f5d72f' />
+      <meta name='google-site-verification' content='LPufNIRLsUDK3tV4ufDTM2tvbcRGl_EAAdZCIPo_fYE' />
       {children}
     </Helmet>
   );
