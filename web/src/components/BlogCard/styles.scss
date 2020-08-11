@@ -1,29 +1,27 @@
 .blog-card {
-	
-	border: none !important;
-	box-shadow: 0 0 10px $dark-grey;
-	margin: 1rem;
-	max-width: 20rem;
+  border: none !important;
+  box-shadow: 0 0 10px $dark-grey;
+  margin: 1rem;
+  max-width: 20rem;
 
-	@media (max-width: $mediumScreen) {
-		max-width: max-content;
-	}
-	
-	.card-body {
-		background-color: $light-grey;
-		transition-duration: 0.2s;
-	}
+  @media (max-width: $mediumScreen) {
+    max-width: max-content;
+  }
+
+  .card-body {
+    background-color: $light-grey;
+    transition-duration: 0.2s;
+    background: $daisy;
+  }
 }
 
 .blog-card:hover {
+  .blog-card-body {
+    background: $dark-grey;
+    color: $light-grey;
 
-	.blog-card-body {
-		background: $dark-grey;
-		color: $light-grey;
-	
-		.link-to-post {
-			color: $light-grey;
-		}
-	}
-	
+    .link-to-post {
+      color: $light-grey;
+    }
+  }
 }

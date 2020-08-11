@@ -1,40 +1,37 @@
 .blog-list-item {
-	transition-duration: 0.5s;
-	background-color: $light-grey;
-	padding: 0 !important;
-	border-radius: $border-radius;
-	height: fit-content;
-	box-shadow: 0 0 10px $dark-grey;
+  transition-duration: 0.5s;
+  background-color: $daisy;
+  padding: 0 !important;
+  border-radius: $border-radius;
+  height: fit-content;
+  box-shadow: 0 0 10px $dark-grey;
 
-	@media (max-width: $smallScreen) {
-		padding: 0.5rem 0 0 0;
-		margin-bottom: 2rem !important;
-	}
+  @media (max-width: $smallScreen) {
+    padding: 0.5rem 0 0 0;
+    margin-bottom: 2rem !important;
+  }
 
-	.col-lg {
-		margin: 0 !important;
-		padding: 0;
+  .col-lg {
+    margin: 0 !important;
+    padding: 0;
 
-		.img-thumbnail {
-			border: none !important ;
-			background-color: $dark-grey !important;
-			padding: 0;
-		}
-	}
+    .img-thumbnail {
+      border: none !important ;
+      background-color: $dark-grey !important;
+      padding: 0;
+    }
+  }
 
-	.blog-list-col {
-		padding-top: 0 !important;
-
-	}
-
-	
+  .blog-list-col {
+    padding-top: 0 !important;
+  }
 }
 
 .blog-list-item:hover {
-	background-color: $dark-grey;
-	color: $light-grey;
+  background-color: $dark-grey;
+  color: $light-grey;
 
-	.link-to-post {
-		color: $light-grey;
-	}
+  .link-to-post {
+    color: $light-grey;
+  }
 }

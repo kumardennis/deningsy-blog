@@ -1,12 +1,25 @@
 @import '~bootstrap/scss/bootstrap';
 html,
 body {
+  position: relative;
   font-family: Manjari;
   margin: 0;
   padding: 0;
   width: 100%;
   background-color: $daisy;
-  background-image: url('../../images/light-pattern.png');
+  background-blend-mode: darken;
+
+  &::before {
+    content: '';
+    background-image: url('../../images/dark-pattern3.png');
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.7;
+  }
 
   h3 {
     font-weight: 700;
