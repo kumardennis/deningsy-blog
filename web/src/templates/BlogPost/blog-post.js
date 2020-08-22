@@ -57,13 +57,18 @@ const BlogPost = ({data}) => {
     },
     types: {
       mainImage: (props) => (
-        <Image
-          fluid
-          style={{maxWidth: '1000px', height: 'auto'}}
-          rounded
-          alt={props.node.alt}
-          src={urlFor(props.node.asset).width(1000).url()}
-        />
+        <div>
+          <Image
+            fluid
+            style={{maxWidth: '1000px', height: 'auto'}}
+            rounded
+            alt={props.node.alt}
+            src={urlFor(props.node.asset).width(1000).url()}
+          />
+          <br />
+          <small>{props.node.caption}</small>
+          {/* <pre>{urlFor(props.node)}</pre> */}
+        </div>
       ),
     },
   };
